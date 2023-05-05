@@ -34,7 +34,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <span style={headingAccentStyles}>Atelier de création digitale</span>
       </h1>
       <p style={paragraphStyles}>
-        Une création par le code ? <br /><br /><code style={codeStyles}>println("Suivez la voie du code");</code><br /><br />pour allez vers le futur de l'humanité...
+        Une création par le code ? <br /><br /><code style={codeStyles}>println("Suivez la voie du code");</code><br /><br />pour aller vers le futur de l'humanité...
       </p>
       
     </main>
