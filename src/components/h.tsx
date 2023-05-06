@@ -8,3 +8,4 @@
  * */
 export { Form, FormNetlify } from './form.tsx';
 export { Layout } from './Layout.tsx';
+export { Button } from './gui.tsx';

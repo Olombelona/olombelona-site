@@ -5,11 +5,11 @@
  * 
  * */
 // REACT
-import * as React from "react"
+import React, { FC } from "react";
 // GATSBY
 import type { HeadFC, PageProps } from "gatsby"
 // APP
-import { Layout } from "../components/h.tsx"
+import { Layout, Button } from "../components/h.tsx"
 
 
 const headingStyles = {
@@ -23,20 +23,12 @@ const headingAccentStyles = {
 const paragraphStyles = {
   marginBottom: 48,
 }
-const codeStyles = {
-  color: "yellow",
-  padding: 4,
-  backgroundColor: "magenta",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
 
-function Button() {
-  // return <code style={codeStyles}>{content}</code>
-  return <code style={codeStyles}>println("Suivez la voie du code");</code>
-}
 
-const IndexPage: React.FC<PageProps> = () => {
+
+
+const IndexPage: FC<PageProps> = () => {
+  const mess = `println("Envoyez-nous votre projet");`
   return (
     <Layout>
       <h1 style={headingStyles}>
@@ -45,9 +37,8 @@ const IndexPage: React.FC<PageProps> = () => {
         <span style={headingAccentStyles}>Atelier de création digitale</span>
       </h1>
       <p style={paragraphStyles}>
-        Une création par le code ? <br /><br /><Button/><br /><br />pour allez vers le futur de l'humanité...
+        Une création par le code ? <br /><br /><Button what={mess}/><br />
       </p>
-      
     </Layout>
   )
 }
