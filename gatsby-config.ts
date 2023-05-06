@@ -4,8 +4,10 @@ require("dotenv").config();
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Olombelona Software`,
+    title: `olombelona software`,
     siteUrl: `https://www.olombelona.com`,
+    version: `0.0.2`,
+    author: `stanislas Marçais / Dinh Doan Van Bien`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
