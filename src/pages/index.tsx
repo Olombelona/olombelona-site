@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <h1 style={headingStyles}>
-        Olombelona
+        Olombelona Software
         <br />
         <span style={headingAccentStyles}>Atelier de création digitale</span>
       </h1>
@@ -54,4 +54,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Olombelona</title>
+export const Head: HeadFC = () => <title>Olombelona Software</title>
