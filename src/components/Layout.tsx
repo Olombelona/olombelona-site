@@ -10,12 +10,18 @@ interface Props {
   children? : React.ReactNode;
 }
 
-const Layout: FC<Props> = ({children}) => {
+const pageStyles = {
+  background : "yellow",
+  color: "magenta",
+  padding: 42,
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+}
+
+
+export const Layout: FC<Props> = ({children}) => {
   return (
-    <div>
+    <div style={pageStyles}>
     {children}
     </div>
   );
 };
-
-export default Layout;
