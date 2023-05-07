@@ -2,8 +2,9 @@
  * 
  * render header file like in C / C++
  * 2023-2023
- * v 0.0.1
+ * v 0.0.2
  * 
  * 
  * */
-export { RenderPageHome } from './render_home.tsx';
+export { RenderHome } from './render_home.tsx';
+export { RenderAbout } from "./render_about.tsx";

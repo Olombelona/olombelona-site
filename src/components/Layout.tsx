@@ -6,10 +6,6 @@
  * */
 // REACT
 import React, { FC } from "react";
-import { useContext } from "react";
-// APP
-import { RegionContext } from "../context.tsx";
-
 
 interface Props {
   children? : React.ReactNode;
@@ -23,8 +19,6 @@ const pageStyles = {
 }
 
 export const Layout: FC<Props> = ({children}) => {
-  const { lang } = useContext(RegionContext);
-  console.log("lang", lang);
   return (
     <div style={pageStyles}>
     {children}

@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 // APP
 import { useNode } from "../utils/h.tsx";
-import { Layout, Button } from "../components/h.tsx";
+import { MarkdownHtml } from "../components/h.tsx";
 import { RegionContext } from "./../context";
 
 // need to define properly the any... it's very too much and very lazy !
@@ -34,20 +34,23 @@ const paragraphStyles = {
   marginBottom: 48,
 }
 
-export const RenderHome: FC<Props> =() => {
+export const RenderAbout: FC<Props> =() => {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "home"}}}) {
+        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "about"}}}) {
           edges {
             node {
               frontmatter {
+                categorie
                 title
                 subtitle
                 message
                 misc
+                menu
                 lang
               }
+              html
             }
           }
         }
@@ -55,19 +58,13 @@ export const RenderHome: FC<Props> =() => {
     `
   )
   const { lang } = useContext(RegionContext);
-  const {frontmatter} = useNode(data, lang);
+  const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter;
 
   return <>
-    {/* <Layout> */}
-      <h1 style={headingStyles}>
-        {info.title}
-        <br />
-        <span style={headingAccentStyles}>{info.subtitle}</span>
-      </h1>
-      <p style={paragraphStyles}>
-       {info.message}<br /><br /><Button what={info.misc}/><br />
-      </p>
-    {/* </Layout> */}
+    <h2 style={headingStyles}>{info.subtitle}</h2>
+    <p style={paragraphStyles}>
+      <MarkdownHtml html={html} />
+    </p>
   </>
 }
