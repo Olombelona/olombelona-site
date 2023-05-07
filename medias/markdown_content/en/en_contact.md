@@ -1,13 +1,15 @@
 ---
 menu: "contact us"
 title: "CONTACT US"
+subtitle: ""
 categorie : "contact"
+message: "little message to explain what you want"
+misc: ""
+lang: "en"
 send: "send"
 firstname: "first name"
 lastname: "family name"
 mail: "email"
-message: "little message to explain what you want"
-lang: "en"
 ---
 
 ## email

@@ -8,12 +8,11 @@
  * */
 
 import { useState } from "react";
-// import { useContext, useState } from "react";
-// import { RegionContext } from "../context/context";
 
-export function useNode(data : any) {
-  // const { lang } = useContext(RegionContext);
-  const lang  = "fr";
+export function useNode(data : any, lang: string | null) {
+  if(lang === null) {
+    lang = "en";
+  }
   let buf_node = data.allMarkdownRemark.edges[0].node;
 
   for(let i = 0 ; i < data.allMarkdownRemark.edges.length ; i++) {
