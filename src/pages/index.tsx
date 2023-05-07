@@ -9,12 +9,16 @@ import React, { FC } from "react";
 // GATSBY
 import type { HeadFC, PageProps } from "gatsby"
 // APP
-import { RenderPageHome } from "../render/h.tsx"
+import { RenderHome, RenderAbout } from "../render/h.tsx"
+import { Layout } from "../components/h.tsx";
 
 
 const IndexPage: FC<PageProps> = () => {
   return (
-    <RenderPageHome/>
+    <Layout>
+      <RenderHome/>
+      <RenderAbout/>
+    </Layout>
   )
 }
 

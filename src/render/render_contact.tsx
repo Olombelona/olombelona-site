@@ -21,7 +21,7 @@ interface Props {
 }
 
 
-export const RenderPageContact: FC<Props> =({data, style_box, style_cell, style_form}) => {
+export const RenderContact: FC<Props> =({data, style_box, style_cell, style_form}) => {
   const node = useNode(data);
   return <>
     {/* <h1>{node.frontmatter.title}</h1> */}
