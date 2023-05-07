@@ -1,19 +1,21 @@
 ---
-menu: "nous contacter"
-title: "NOUS CONTACTER"
+menu: "contact us"
+title: "contactez nous"
+subtitle: ""
 categorie : "contact"
-send: "envoyer"
-firstname: "prénom"
-lastname: "nom"
-mail: "courriel"
-message: "Un petit message pour expliquer pourquoi, comment, où..."
+message: "Parlez nous de votre projet"
+misc: ""
 lang: "fr"
+send: "send"
+firstname: "first name"
+lastname: "family name"
+mail: "email"
 ---
 
 ## couriel
 
-par mail, vous pouvez remplir le formulaire ci-desous et nous vous recontacterons dès que nous aurons pris connaissance de votre meeqage.
+Écrivez-nous un message, nous vous recontacterons dès que possible.
 
 ## réseaux
 
-vous pouvez nous contacter aussi via les réseaux sociaux
+Vous pouvez nous contactez par ici aussi !

@@ -34,7 +34,6 @@ export const Button : FC<ButtonProps> = ({what}) => {
       set_is(true);
     }
   }
-  console.log("is", is);
 
   return (
     <>

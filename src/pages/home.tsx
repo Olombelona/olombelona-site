@@ -12,12 +12,12 @@ import type { HeadFC, PageProps } from "gatsby"
 import { RenderPageHome } from "../render/h.tsx"
 
 
-const IndexPage: FC<PageProps> = () => {
+const Home: FC<PageProps> = () => {
   return (
     <RenderPageHome/>
   )
 }
 
-export default IndexPage
+export default Home;
 
 export const Head: HeadFC = () => <title>Olombelona Software</title>
