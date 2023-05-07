@@ -1,0 +1,30 @@
+{
+	"fr": {
+		"home": "accueil",
+		"main": "projet",
+		"contact": "contact",
+		"about": "à propos",
+		"other": "journal",
+		"login": "se connecter",
+		"logout": "se déconnecter",
+		"legal": "mentions légales",
+		"lang": {
+			"fr": "français",
+			"en": "anglais"
+		}
+	},
+	"en": {
+		"home": "home",
+		"main": "project",
+		"contact": "contact",
+		"about": "about",
+		"other": "log",
+		"login": "log in",
+		"logout": "log out",
+		"legal": "legal notices",
+		"lang": {
+			"fr": "french",
+			"en": "english"
+		}
+	}
+}
