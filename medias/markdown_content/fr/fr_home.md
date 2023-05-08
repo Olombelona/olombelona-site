@@ -1,6 +1,6 @@
 ---
 menu: "home"
-title: "Olombena software"
+title: "Olombena Software"
 subtitle: "Atelier de création digitale"
 categorie: "home"
 message: "Besoin d'une création par le code ?"
