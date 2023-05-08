@@ -29,7 +29,7 @@ interface ButtonProps {
   what: string;
 }
 
-export const Button : FC<ButtonProps> = ({what}) => {
+export const ButtonCode : FC<ButtonProps> = ({what}) => {
   let button_style = {
   // const button_style = {
     color: "yellow",

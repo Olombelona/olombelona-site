@@ -17,6 +17,11 @@ import { get_css_value } from "../utils/h_u.tsx";
 const Contact: FC<PageProps> = () => {
   const style_cell = {
     width: "100px",
+    height: "42px",
+    fontFamily: get_css_value("--font_title"),
+    fontWeight: 700,
+    fontSize: 18,
+    color: get_css_value("--color_text_light"),
     background: get_css_value("--color_button")
   }
 

@@ -29,6 +29,8 @@ interface Props {
   placeholder : any;
 }
 
+// https://www.seancdavis.com/posts/how-to-use-netlify-forms-with-gatsby/
+
 export const Form: FC<Props> & {  Input: typeof FormInput, 
                                   TextArea: typeof FormTextArea, 
                                   Submit: typeof FormSubmit,} = (props) => {

@@ -1,3 +1,12 @@
+/**
+ * Menu big
+ * this menu is a generic one 
+ * for the desktop or computer
+ * 2023-2023
+ * v 0.0.3
+ * 
+ * */
+
 // REACT
 import React from "react";
 // APP
@@ -16,7 +25,9 @@ const header_box_style = {
 const style_cell = {
 	width: get_css_value("--width_header_cell"),
 	height: get_css_value("--height_header_cell"),
-	// fontFamily:"sans-serif",
+	fontFamily: get_css_value("--font_title"),
+  fontWeight: 700,
+  fontSize: 20,
 	cursor: "pointer",
 }
 
