@@ -4,7 +4,8 @@
 	
 	/* font palette  */
 	/* --font_current: serif; */
-  --font_current: "aglet-mono", "oso-serif-variable", Arial, Helvetica, sans-serif, serif;
+	--font_title: "lunatix", "oso-serif-variable", Arial, Helvetica, sans-serif, serif;
+  --font_current: "din-2014", Arial, Helvetica, sans-serif, serif;
 	/* --font_current: Arial, Helvetica, sans-serif; */
 	/* olor palette */
 	--color_0: black;
@@ -32,11 +33,10 @@
 
 	--color_bg_form: var(--color_2);
 
-	--color_button: var(--color_4);
+	--color_button: var(--color_2);
 
 	--layout_bg: var(--color_3);
 
-	/* the app misc */
 	--screen_min: 600px;
 
 	--height_header: 48px;
@@ -87,4 +87,20 @@ textarea {
 .header {
 	background: var(--color_header);
 	color:var(--color_text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font_title);
+}
+
+h1 {
+	font-size: 2.75em;
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+h3, h4, h5, h6 {
+	font-size: 1.5em;
 }

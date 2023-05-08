@@ -21,7 +21,6 @@ interface Props {
   style_form: any;
   style_cell: any;
   style_box : any;
-  // data : any;
 }
 
 

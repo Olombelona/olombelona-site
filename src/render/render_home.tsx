@@ -13,8 +13,9 @@ import { useStaticQuery, graphql } from "gatsby";
 
 // APP
 import { useNode } from "../utils/h_u.tsx";
-import { Button } from "../components/h_c.tsx";
+import { ButtonCode } from "../components/h_c.tsx";
 import { RegionContext } from "./../context";
+import { get_css_value } from "../utils/h_u.tsx";
 
 // need to define properly the any... it's very too much and very lazy !
 interface Props {
@@ -22,16 +23,19 @@ interface Props {
 }
 
 
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 42,
+const style_titles = {
+  fontFamily: get_css_value("--font_title"),
+  marginTop: 24,
   maxWidth: 600,
 }
-const headingAccentStyles = {
+const style_subtitles = {
   color: "magenta",
+  marginTop: -24,
+  marginLeft: 128,
+  marginBottom: 42,
 }
-const paragraphStyles = {
-  marginBottom: 48,
+const current_styles = {
+  marginLeft: 42,
 }
 
 export const RenderHome: FC<Props> =() => {
@@ -59,13 +63,11 @@ export const RenderHome: FC<Props> =() => {
   const info = frontmatter;
 
   return <>
-      <h1 style={headingStyles}>
-        {info.title}
-        <br />
-        <span style={headingAccentStyles}>{info.subtitle}</span>
-      </h1>
-      <p style={paragraphStyles}>
-       {info.message}<br /><br /><Button what={info.misc}/><br />
+      <h1 style={style_titles}>{info.title}</h1>
+      <h2 style={style_subtitles}>{info.subtitle}</h2>
+      <p style={current_styles}>{info.message}</p>
+      <p>
+        <ButtonCode what={info.misc}/>
       </p>
   </>
 }
