@@ -12,8 +12,8 @@ import { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // APP
-import { useNode } from "../utils/h.tsx";
-import { MarkdownHtml } from "../components/h.tsx";
+import { useNode } from "../utils/h_u.tsx";
+import { MarkdownHtml } from "../components/h_c.tsx";
 import { RegionContext } from "./../context";
 
 // need to define properly the any... it's very too much and very lazy !

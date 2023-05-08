@@ -27,7 +27,7 @@
 
 	--color_footer: var(--color_4);
 
-	--color_bg_form: var(--color_3);
+	--color_bg_form: var(--color_2);
 
 	--color_button: var(--color_4);
 
@@ -50,4 +50,33 @@ body {
   background: var(--color_global);
 	color: var(--color_text_dark);
   margin: 0px;
+}
+
+
+input {
+  background: var(--color_bg_form);
+	color: var(--color_text_dark);
+  box-sizing: border-box;
+  padding: 0.3em;
+  margin: 0.3em;
+}
+
+input[type="text"] {
+  width: 25em;
+}
+
+input[type="email"] {
+  width: 20em;
+}
+
+input[type="password"] {
+  width: 20em;
+}
+
+textarea {
+  background: var(--color_bg_form);
+	color: var(--color_text_dark);
+  margin: 0.3em;
+  width: 25em;
+  height: 10em;
 }

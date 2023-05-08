@@ -8,10 +8,10 @@
 import React, { FC } from "react";
 import { useContext } from "react";
 // APP
-import { NavCellBox, Box } from "../h.tsx"
-import { get_css_value} from "./../../utils/h.tsx";
+import { NavCellBox, Box, GoHome, DropdowRegions } from "../h_c.tsx"
+import { get_css_value } from "../../utils/h_u.tsx";
 import tree from "./../../../medias/tree.json";
-import { RegionContext } from "../../context";
+import { RegionContext, HeaderContext } from "../../context";
 
 
 
@@ -21,11 +21,13 @@ interface Props {
   style_box?: any;
   className_cell?: string;
   style_cell?: any;
+	in_line ?: boolean
 }
 
 
-export const MenuContent: FC<Props> =({className_box, style_box, className_cell, style_cell}) => {
+export const MenuContent: FC<Props> =({className_box, style_box, className_cell, style_cell, in_line}) => {
   const { lang } = useContext(RegionContext);
+	// const { other_db_is, num_item_bd } = useContext(HeaderContext);
   let hh = get_css_value("--height_header");
 	let hhc = get_css_value("--height_header_cell");
 	let height_header = 0;
@@ -53,8 +55,24 @@ export const MenuContent: FC<Props> =({className_box, style_box, className_cell,
   const box = Object.assign({}, style_cell, temp_box);
 	const cell = Object.assign({}, temp_cell);
 
+	// may be this elements can be passed like a children ????
   return <Box className={className_box} style={style_box}>
+		{in_line !== false ? <GoHome style_box={box} style_cell={cell}/> : <></>}
+		{/* {in_line !== false ? <GoHome className_box={"home_box"} style_box={box} style_cell={cell}/> : <></>} */}
     <NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header - height_header_cell) * 0.5 + "px"} 
+										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
+		} }/>
+
+		{/* {in_line === true ? 
+			<DropdownRadioGroup style_box={box} style_cell={cell} offset={(height_header - height_header_cell) * 0.5+"px"} in_line={in_line} /> : 
+			<DropdownClassic style_box={box} style_cell={cell} offset={offset_dropdown} in_line={in_line} />
+		} */}
   </Box>
 }
+
+
+// <DropdowRegions style_box={box} style_cell={cell} offset={(height_header - height_header_cell) * 0.5+"px"}/>
+
+// style_box={box} style_cell={cell} offset={(height_header - height_header_cell) * 0.5+"px"

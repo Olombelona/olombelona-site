@@ -7,7 +7,7 @@
 // REACT
 import React, { FC } from "react";
 // APP
-import { get_css_value }  from "../utils/h";
+import { get_css_value }  from "../utils/h_u";
 
 
 interface PropsDesign {

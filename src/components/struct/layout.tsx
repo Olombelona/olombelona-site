@@ -6,6 +6,8 @@
  * */
 // REACT
 import React, { FC } from "react";
+// APP
+import { Header } from "./header";
 
 interface Props {
   children? : React.ReactNode;
@@ -21,6 +23,7 @@ const pageStyles = {
 export const Layout: FC<Props> = ({children}) => {
   return (
     <div style={pageStyles}>
+      <Header/>
     {children}
     </div>
   );

@@ -7,15 +7,16 @@
 // REACT
 import React, { FC } from "react";
 // APP
-import { MenuContent } from "./../menu/menu_content";
+import { MenuBig } from "./../menu/menu__big";
+import { HeaderContextProvider } from "../../context";
 
 interface PropsHeader { 
 
 }
 
 export const Header: FC<PropsHeader> = () => {
-  const { lang } = useContext(RegionContext);
-  return (
-    <><MenuContent/></>
-  )
+  return (<HeaderContextProvider>
+    <MenuBig/>
+  </HeaderContextProvider>)
 } 
+

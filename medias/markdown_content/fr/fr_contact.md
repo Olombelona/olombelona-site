@@ -6,10 +6,10 @@ categorie : "contact"
 message: "Parlez nous de votre projet"
 misc: ""
 lang: "fr"
-send: "send"
-firstname: "first name"
-lastname: "family name"
-mail: "email"
+send: "envoyer"
+firstname: "prénom"
+lastname: "nom"
+mail: "courriel"
 ---
 
 ## couriel
