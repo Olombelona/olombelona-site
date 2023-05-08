@@ -28,16 +28,13 @@
 	--color_menu_big: var(--color_3);
 	--color_menu_small: var(--color_3);
 
-	--color_footer: var(--color_4);
+	--color_footer: var(--color_2);
 
 	--color_bg_form: var(--color_2);
 
 	--color_button: var(--color_4);
 
-	--layout_home_bg: var(--color_3);
-	--layout_main_bg: var(--color_2);
-	--layout_log_bg: var(--color_4);
-	--layout_404_bg: var(--color_0);
+	--layout_bg: var(--color_3);
 
 	/* the app misc */
 	--screen_min: 600px;
@@ -46,6 +43,9 @@
 	--size_header_cell: 30px;
 	--height_header_cell: 30px;
 	--width_header_cell: 100px;
+	--width_header_max: 700px;
+
+	--width_content_max: 800px;
 }
 
 body {

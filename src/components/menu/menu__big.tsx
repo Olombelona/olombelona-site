@@ -2,7 +2,7 @@
 import React from "react";
 // APP
 import { get_css_value}  from "../../utils/h_u";
-import { MenuContent } from "./menu_content";
+import { MenuContent } from "./menu_header";
 
 const header_box_style = {
 	margin: "0 auto",
@@ -10,7 +10,7 @@ const header_box_style = {
 	justifyContent: "space-between",
 
 	height: get_css_value("--height_header"),
-	maxWidth: "600px",
+	maxWidth: get_css_value("--width_header_max"),
 }
 
 const style_cell = {
