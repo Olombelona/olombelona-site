@@ -59,7 +59,6 @@ export const RenderHome: FC<Props> =() => {
   const info = frontmatter;
 
   return <>
-    {/* <Layout> */}
       <h1 style={headingStyles}>
         {info.title}
         <br />
@@ -68,6 +67,5 @@ export const RenderHome: FC<Props> =() => {
       <p style={paragraphStyles}>
        {info.message}<br /><br /><Button what={info.misc}/><br />
       </p>
-    {/* </Layout> */}
   </>
 }

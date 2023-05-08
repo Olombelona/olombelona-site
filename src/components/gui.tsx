@@ -93,6 +93,8 @@ export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, classNam
 
 
 
+// GO HOME
+//////////////////
 export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, style_cell}) => {
 	let size = get_css_value("--height_header_cell");
 	if(size === undefined) {
@@ -119,7 +121,8 @@ export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, 
 	return (
     <NavCellBox to="/" className_box={className_box} style_box={style_box} className_cell={className_cell} style_cell={style_cell}>
       <div style={{maxWidth: size+"px", maxHeight:size+"px"}}>
-        <StaticImage 	src="./../../../media/images/home.png" alt="Home" 
+        {/* truc */}
+        <StaticImage 	src="./../../medias/home.png" alt="Home" 
                       placeholder="blurred" layout="constrained"
                       imgStyle={img_style} />
       </div>

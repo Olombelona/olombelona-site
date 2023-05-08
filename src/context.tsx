@@ -71,7 +71,12 @@ type type_header_context = {
 };
 
 const init_header_context = {
-  // your code
+	other_db_is: false,
+  set_other_db_is: function() {},
+	lang_db_is: false,
+  set_lang_db_is: function() {},
+	num_item_bd: 0,
+  set_num_item_bd: function() {}
 };
 
 

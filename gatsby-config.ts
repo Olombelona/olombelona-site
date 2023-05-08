@@ -25,6 +25,10 @@ const config: GatsbyConfig = {
         crossOrigin: `use-credentials`,
       },
     },
+    // IMAGE
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     // FILE
     {
       resolve: `gatsby-source-filesystem`,

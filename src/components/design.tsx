@@ -9,6 +9,13 @@ import React, { FC } from "react";
 // APP
 import { get_css_value }  from "../utils/h_u";
 
+// interface BoxProps {
+//   className_box?: string;
+//   style_box?: any;
+//   className_cell?: string;
+//   style_cell?: any;
+// }
+
 
 interface PropsDesign {
   children? : React.ReactNode;
