@@ -9,7 +9,7 @@ import React, { FC } from "react";
 // GATSBY
 import type { HeadFC, PageProps } from "gatsby"
 // APP
-import { RenderAbout } from "../render/h_r.tsx"
+import { RenderAbout, RenderTeam } from "../render/h_r.tsx"
 import { Layout } from "../components/h_c.tsx";
 
 
@@ -17,6 +17,7 @@ const About: FC<PageProps> = () => {
   return (
     <Layout>
       <RenderAbout/>
+      <RenderTeam/>
     </Layout>
   )
 }
