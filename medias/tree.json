@@ -1,0 +1,36 @@
+{
+	"fr": {
+		"home": "accueil",
+		"about": "à propos",
+		"team": "équipe",
+		"contact": "contact",
+		"blog": "journal",
+		"project": "projet",
+		"gallery": "galerie",
+		"portfolio": "portfolio",
+		"login": "se connecter",
+		"logout": "se déconnecter",
+		"legal": "mentions légales",
+		"lang": {
+			"fr": "français",
+			"en": "anglais"
+		}
+	},
+	"en": {
+		"home": "home",
+		"about": "about",
+		"team": "team",
+		"contact": "contact",
+		"blog": "blog",
+		"project": "projet",
+		"gallery": "gallery",
+		"portfolio": "portfolio",
+		"login": "log in",
+		"logout": "log out",
+		"legal": "legal notices",
+		"lang": {
+			"fr": "french",
+			"en": "english"
+		}
+	}
+}

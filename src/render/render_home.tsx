@@ -12,8 +12,8 @@ import { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // APP
-import { useNode } from "../utils/h.tsx";
-import { Layout, Button } from "../components/h.tsx";
+import { useNode } from "../utils/h_u.tsx";
+import { Button } from "../components/h_c.tsx";
 import { RegionContext } from "./../context";
 
 // need to define properly the any... it's very too much and very lazy !
@@ -59,7 +59,6 @@ export const RenderHome: FC<Props> =() => {
   const info = frontmatter;
 
   return <>
-    {/* <Layout> */}
       <h1 style={headingStyles}>
         {info.title}
         <br />
@@ -68,6 +67,5 @@ export const RenderHome: FC<Props> =() => {
       <p style={paragraphStyles}>
        {info.message}<br /><br /><Button what={info.misc}/><br />
       </p>
-    {/* </Layout> */}
   </>
 }

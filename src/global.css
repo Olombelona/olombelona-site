@@ -17,17 +17,20 @@
 
 	/* the app color */
 	--color_text_dark: var(--color_5);
+	--color_text: var(--color_2);
 	--color_text_light: var(--color_3);
 
 	--color_global: var(--color_3);
 
-	--color_header: var(--color_4);
-	--color_menu_big: var(--color_4);
+	--color_line: var(--color_2);
+
+	--color_header: var(--color_3);
+	--color_menu_big: var(--color_3);
 	--color_menu_small: var(--color_3);
 
 	--color_footer: var(--color_4);
 
-	--color_bg_form: var(--color_3);
+	--color_bg_form: var(--color_2);
 
 	--color_button: var(--color_4);
 
@@ -39,7 +42,7 @@
 	/* the app misc */
 	--screen_min: 600px;
 
-	--height_header: 40px;
+	--height_header: 48px;
 	--size_header_cell: 30px;
 	--height_header_cell: 30px;
 	--width_header_cell: 100px;
@@ -50,4 +53,38 @@ body {
   background: var(--color_global);
 	color: var(--color_text_dark);
   margin: 0px;
+}
+
+
+input {
+  background: var(--color_bg_form);
+	color: var(--color_text_dark);
+  box-sizing: border-box;
+  padding: 0.3em;
+  margin: 0.3em;
+}
+
+input[type="text"] {
+  width: 25em;
+}
+
+input[type="email"] {
+  width: 20em;
+}
+
+input[type="password"] {
+  width: 20em;
+}
+
+textarea {
+  background: var(--color_bg_form);
+	color: var(--color_text_dark);
+  margin: 0.3em;
+  width: 25em;
+  height: 10em;
+}
+
+.header {
+	background: var(--color_header);
+	color:var(--color_text);
 }

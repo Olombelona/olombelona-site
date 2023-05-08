@@ -12,7 +12,8 @@ import React, { FC } from "react";
 
 // need to define properly the any... it's very too much and very lazy !
 interface Props {
-  children? : React.ReactNode;
+  children? : any;
+  // children? : React.ReactNode;
   id_name: any;
   method: any;
   form_name : any;
