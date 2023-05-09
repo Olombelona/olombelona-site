@@ -7,7 +7,7 @@
 // REACT
 import React, { FC } from "react";
 // APP
-import { MenuBig } from "./../menu/menu__big";
+import { MenuHeaderBig } from "../menu/menu__header_big";
 import { HeaderContextProvider } from "../../context";
 
 interface PropsHeader { 
@@ -16,7 +16,7 @@ interface PropsHeader {
 
 export const Header: FC<PropsHeader> = () => {
   return (<HeaderContextProvider>
-    <MenuBig/>
+    <MenuHeaderBig/>
   </HeaderContextProvider>)
 } 
 

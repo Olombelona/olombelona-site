@@ -205,11 +205,19 @@ interface RegionProps extends DesignProps {
 }
 
 // we cannot use key for the props because it's react reserved word
+
+// NEED TO RELOAD PAGE
+// https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
+// window.location.reload(); reload but keep the setting same
 export const Region:FC<RegionProps>= ({className_box, style_box, className_cell, style_cell, keys, index, children}) => {
 	const { set_lang } = useContext(RegionContext);
+
+
 	function mouse_click(event: { preventDefault: () => void; }) {
 		event.preventDefault();
+    // window.location.reload();
 		set_lang(keys[index]);
+    // window.location.reload();
 	}
 
 	return <Box className={className_box} style={style_box}>
