@@ -12,6 +12,8 @@ import type { HeadFC, PageProps } from "gatsby"
 import { RenderHome, RenderAbout } from "../render/h_r.tsx"
 import { Layout } from "../components/h_c.tsx";
 
+// Try to add meta to disable auto translate from safari and google
+// https://medium.com/yellowcode/how-to-do-meta-tags-in-gatsbyjs-45245dc68ab9
 
 const IndexPage: FC<PageProps> = () => {
   return (

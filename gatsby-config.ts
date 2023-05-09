@@ -8,6 +8,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.olombelona.com`,
     version: `0.0.2`,
     author: `stanislas Marçais / Dinh Doan Van Bien`,
+    google: `nostranslate`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
