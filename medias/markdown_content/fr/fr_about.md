@@ -1,13 +1,12 @@
 ---
 menu: "about"
-title: "A PROPOS"
+title: "À propos"
 subtitle: ""
 categorie : "about"
 message: ""
 misc: ""
 lang: "fr"
 ---
-
 # À Propos
 
 Olombelona Software vous accueille dans son univers créatif, technologique et humain.

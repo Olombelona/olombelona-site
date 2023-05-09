@@ -1,6 +1,6 @@
 ---
 menu: "team"
-title: "MEET OUR TEAM"
+title: "Meet Our Team"
 subtitle: "The brains behind our innovative software solutions"
 categorie : "team"
 message: ""

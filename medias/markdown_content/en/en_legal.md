@@ -1,6 +1,6 @@
 ---
-title: "Legals"
 menu: "legal"
+title: "Legals"
 categorie : "legal"
 lang: "en"
 ---

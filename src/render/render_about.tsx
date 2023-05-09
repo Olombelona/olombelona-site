@@ -27,9 +27,7 @@ const headingStyles = {
   marginBottom: 42,
   maxWidth: 600,
 }
-const headingAccentStyles = {
-  color: "magenta",
-}
+
 const paragraphStyles = {
   marginBottom: 48,
 }

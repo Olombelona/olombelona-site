@@ -50,9 +50,6 @@ export const RenderContact: FC<Props> =({style_box, style_cell, style_form}) => 
   
   const {frontmatter} = useNode(data, lang);
   const info = frontmatter;
-  console.log("lang", lang);
-  console.log("info", info);
-  console.log("data", data);
   return <>
     <h1>{info.title}</h1>
     {/* <ContentMarkdownHtml html={node.html} /> */}

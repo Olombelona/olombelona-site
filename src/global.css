@@ -58,7 +58,7 @@ body {
 
 input {
   background: var(--color_bg_form);
-	color: var(--color_text_dark);
+	color: var(--color_text_light);
   box-sizing: border-box;
   padding: 0.3em;
   margin: 0.3em;
@@ -78,7 +78,8 @@ input[type="password"] {
 
 textarea {
   background: var(--color_bg_form);
-	color: var(--color_text_dark);
+	color: var(--color_text_light);
+	padding: 0.3em;
   margin: 0.3em;
   width: 25em;
   height: 10em;
