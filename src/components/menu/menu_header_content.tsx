@@ -1,7 +1,7 @@
 /**
  * MENU HEADER CONTET
  * 2023-2023
- * V 0.0.2
+ * V 0.0.3
  */
 
 // REACT
@@ -25,7 +25,7 @@ interface Props {
 }
 
 
-export const MenuContent: FC<Props> =({className_box, style_box, className_cell, style_cell, in_line}) => {
+export const MenuHeaderContent: FC<Props> =({className_box, style_box, className_cell, style_cell, in_line}) => {
   const { lang } = useContext(RegionContext);
 	// const { other_db_is, num_item_bd } = useContext(HeaderContext);
   let hh = get_css_value("--height_header");

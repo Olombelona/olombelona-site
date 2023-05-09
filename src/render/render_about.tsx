@@ -56,8 +56,10 @@ export const RenderAbout: FC<Props> =() => {
     `
   )
   const { lang } = useContext(RegionContext);
+  // console.log("lang", lang);
   const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter;
+  // console.log("info", info);
 
   return <>
     <h2 style={headingStyles}>{info.subtitle}</h2>

@@ -3,7 +3,7 @@
  * this menu is a generic one 
  * for the desktop or computer
  * 2023-2023
- * v 0.0.3
+ * v 0.0.4
  * 
  * */
 
@@ -11,7 +11,7 @@
 import React from "react";
 // APP
 import { get_css_value}  from "../../utils/h_u";
-import { MenuContent } from "./menu_header";
+import { MenuHeaderContent } from "./menu_header_content";
 
 const header_box_style = {
 	margin: "0 auto",
@@ -31,6 +31,6 @@ const style_cell = {
 	cursor: "pointer",
 }
 
-export function MenuBig() {
-	return <MenuContent className_box="header" style_box={header_box_style} style_cell={style_cell} in_line={true}/>
+export function MenuHeaderBig() {
+	return <MenuHeaderContent className_box="header" style_box={header_box_style} style_cell={style_cell} in_line={true}/>
 }
