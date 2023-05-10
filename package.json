@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "gatsby": "^5.9.0",
+    "gatsby-plugin-fix-fouc": "^1.0.3",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-nprogress": "^5.9.0",

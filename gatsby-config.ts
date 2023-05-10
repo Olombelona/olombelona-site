@@ -1,5 +1,8 @@
 import type { GatsbyConfig } from "gatsby"
 
+// import { breakpoints } from "./src/themes";
+import type { GatsbyPluginFixFoucRefOptions } from "gatsby-plugin-fix-fouc";
+
 require("dotenv").config();
 
 const config: GatsbyConfig = {
@@ -15,7 +18,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    // LOADING
+    // LOADING Not sur that's work
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -24,6 +27,15 @@ const config: GatsbyConfig = {
         // Disable the loading spinner.
         showSpinner: false,
       },
+    },
+    // LOADING 2
+    {
+      resolve: `gatsby-plugin-fix-fouc`,
+      options: {
+        attributeName: "is-loading",
+        // minWidth: breakpoints.values.sm,
+        timeout: 3000,
+      } as GatsbyPluginFixFoucRefOptions,
     },
     // FONT
     {
