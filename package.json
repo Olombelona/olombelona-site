@@ -20,7 +20,6 @@
     "gatsby-plugin-fix-fouc": "^1.0.3",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
-    "gatsby-plugin-nprogress": "^5.9.0",
     "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^5.9.0",
