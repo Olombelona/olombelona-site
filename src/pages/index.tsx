@@ -4,18 +4,8 @@
  * v 0.0.2
  * 
  * */
-
-
-
-// WARNING
-// Flash of Unstyled Content (FOUC)
-
-// https://www.digitalocean.com/community/tutorials/how-to-handle-async-data-loading-lazy-loading-and-code-splitting-with-react
-// https://stackoverflow.com/questions/59572173/flash-of-unstyled-content-fouc-when-using-gatsby-with-emotion
-
-
-
-
+// Fix the Flash of Unstyled Content (FOUC)
+// https://www.gatsbyjs.com/plugins/gatsby-plugin-fix-fouc/
 
 
 // REACT
