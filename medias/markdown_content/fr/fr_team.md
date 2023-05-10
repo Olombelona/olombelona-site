@@ -7,7 +7,6 @@ message: ""
 misc: ""
 lang: "fr"
 ---
-
 # L'équipe
 
 Nous sommes fiers de vous présenter notre équipe de direction, qui réunit deux experts de haut niveau dans leurs domaines respectifs.  

@@ -1,7 +1,7 @@
 ---
 menu: "home"
-title: "Olombelona Software"
-subtitle: "Digital design workshop"
+title: "Olombena Software"
+subtitle: "Boutique Software Development"
 categorie: "home"
 message: "Creation through code?"
 misc: "println(”Send your project to us”);"

@@ -1,22 +1,21 @@
 ---
 menu: "team"
-title: "The Team"
-subtitle: ""
+title: "Meet Our Team"
+subtitle: "The brains behind our innovative software solutions"
 categorie : "team"
 message: ""
 misc: ""
 lang: "en"
 ---
-# The team
+# Our Team
 
-We are proud to introduce our management team, which includes two top experts in their respective fields.  
+Our management team consists of two brilliant professionals who have extensive experience and skills in their domains.  
 
-## Dinh Doan Van Bien [ Technical Director ]
+## Dinh Doan Van Bien [ Chief Technology Officer ]
 
-He is our technical guarantor. With over 25 years of experience in large-scale software development, he has worked at Amazon and Microsoft, where he is the Principal Software Engineering Manager. He is passionate about code in all its forms, software architecture and artificial intelligence.
+Dinh is the mastermind behind our cutting-edge software products. He has over two decades of experience in leading and delivering software projects for some of the world's most renowned companies, such as Amazon and Microsoft, where he is a Principal Software Engineering Manager. He is an avid coder, a software architect and an artificial intelligence enthusiast, and he inspires our team with his knowledge and vision.
 
-## Stanislas Marçais [ Art Director ]
+## Stanislas Marçais [ Creative Director ]
 
-He is our creative coder. He has 23 years of experience as a coding artist and graphic designer. He is notably the creator of the Romanesco software, a tool for generating complex geometric shapes from algorithms. 
+He is our creative coder. He has 23 years of experience as a coding artist and graphic designer. He is the inventor of the Romanesco software, a tool for creating stunning geometric shapes from algorithms.
 
-Together, they form a dynamic and innovative team, ready to take on the challenges of tomorrow.

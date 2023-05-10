@@ -27,9 +27,19 @@ interface DesignProps {
 ///////////////////
 interface ButtonProps {
   what: string;
+  to: string;
 }
 
-export const ButtonCode : FC<ButtonProps> = ({what}) => {
+//////////////////////////
+// NAVIGATION
+////////////////////////
+
+
+// ButtonCodeNav
+////////////////
+// in progress
+///////////////
+export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
   let button_style = {
   // const button_style = {
     color: "yellow",
@@ -52,31 +62,27 @@ export const ButtonCode : FC<ButtonProps> = ({what}) => {
   }
 
   return (
-    <>
-       <div>
+    <NavCell to={to}>
         <code onClick={() => toggle_button()} style={button_style}>{what}</code>
-      </div>
-    </>
+    </NavCell>
   )
 }
 
 
-
-//////////////////////////
-// NAVIGATION
-////////////////////////
 
 /////////////
 // NAVIGATION
 /////////////
 interface NavProps extends DesignProps {
   children ?: any;
-  to ? : any;
+  to: string;
   className?: string;
   style?: any;
 
 }
 
+// NavCell
+//////////
 export const NavCell: FC<NavProps> = ({to, className, style, children}) => {
 	function mouse_click(event: { preventDefault: () => void; }) {
 		event.preventDefault();
@@ -85,6 +91,8 @@ export const NavCell: FC<NavProps> = ({to, className, style, children}) => {
 	return <div className={className} style={style} onClick={mouse_click}>{children}</div>
 }
 
+// NavCellBox
+//////////////
 export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, className_cell, style_cell, children}) =>{
 	return <Box className={className_box} style={style_box}>
 			<NavCell to={to} className={className_cell} style={style_cell}>{children}</NavCell>
@@ -105,7 +113,6 @@ export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, 
 	return (
     <NavCellBox to="/" className_box={className_box} style_box={style_box} className_cell={className_cell} style_cell={style_cell}>
       <div style={{maxWidth: size+"px", maxHeight:size+"px"}}>
-        {/* truc */}
         <StaticImage 	src="./../../medias/home.png" alt="Home" 
                       placeholder="blurred" layout="constrained"
                       // imgStyle={img_style} 

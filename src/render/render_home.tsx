@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 // APP
 import { useNode } from "../utils/h_u.tsx";
-import { ButtonCode } from "../components/h_c.tsx";
+import { ButtonCodeNav } from "../components/h_c.tsx";
 import { RegionContext } from "./../context";
 import { get_css_value } from "../utils/h_u.tsx";
 
@@ -67,7 +67,7 @@ export const RenderHome: FC<Props> =() => {
       <h2 style={style_subtitles}>{info.subtitle}</h2>
       <p style={current_styles}>{info.message}</p>
       <p>
-        <ButtonCode what={info.misc}/>
+        <ButtonCodeNav what={info.misc} to="/contact"/>
       </p>
   </>
 }
