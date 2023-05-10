@@ -6,6 +6,9 @@
  * */
 // REACT
 import React, { FC } from "react";
+// OTHER
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 // APP
 import { Header } from "./header";
 import { Footer } from "./footer";
@@ -31,13 +34,14 @@ const style_content_cell = {
 
 export const Layout: FC<Props> = ({children}) => {
   return (<>
-    <Header/>
+    { <Header/> || <Skeleton/> }
     <div style={style_content_box}>
       <div style={style_content_cell}>
-        {children}
+        {children || <Skeleton/>}
       </div>
     </div>
-    <Footer/>
+    { <Footer/> || <Skeleton/> }
+    
     </>
   );
 };
