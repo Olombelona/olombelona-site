@@ -10,7 +10,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 // APP
 import { get_css_value } from "../../utils/tools";
-import { Legal } from "../menu/menu_footer";
+import { Legal, InfoFooter } from "../menu/menu_footer";
 
 const style_footer = {
 	margin: "auto 0",
@@ -21,6 +21,12 @@ const style_footer = {
 	height: "50px",
   color: get_css_value("--color_text_light"),
 	background: get_css_value("--color_footer"),
+}
+
+const style_cell = {
+	paddingLeft : "0.5em",
+	paddingRight : "0.5em",
+	textTransform: "capitalize",
 }
 
 
@@ -41,7 +47,8 @@ export function Footer() {
 
 	const year = new Date().getFullYear();
 	return <div className="footer" style={style_footer}>
-		<div>{data.site.siteMetadata.title} {year}</div>
+		<InfoFooter style={style_cell}>{data.site.siteMetadata.title} {year}</InfoFooter>
+		<InfoFooter style={style_cell}>|</InfoFooter>
 		<Legal/>
 	</div>
 }
