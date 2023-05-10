@@ -49,3 +49,81 @@
 
 	--width_content_max: 800px;
 }
+
+body {
+  font-family: var(--font_current);
+  background: var(--color_global);
+	color: var(--color_text_current);
+  margin: 0px;
+	font-size: 1em;
+}
+
+
+input {
+  background: var(--color_bg_form);
+	color: var(--color_text_light);
+  box-sizing: border-box;
+  padding: 0.3em;
+  margin: 0.3em;
+}
+
+input[type="text"] {
+  width: 25em;
+}
+
+input[type="email"] {
+  width: 20em;
+}
+
+input[type="password"] {
+  width: 20em;
+}
+
+textarea {
+  background: var(--color_bg_form);
+	color: var(--color_text_light);
+	padding: 0.3em;
+  margin: 0.3em;
+  width: 25em;
+  height: 10em;
+}
+
+.header {
+	background: var(--color_header);
+	color:var(--color_text_title);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font_title);
+	color:var(--color_text_title);
+}
+
+h1 {
+	font-size: 2.75em;
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+h3, h4, h5, h6 {
+	font-size: 1.5em;
+}
+
+
+@media only screen and (max-width: 480px) {
+	p {
+		font-size: 0.95em;
+	}
+  h1 {
+		font-size: 2.25em;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+	
+	h3, h4, h5, h6 {
+		font-size: 1.2em;
+	}
+}
