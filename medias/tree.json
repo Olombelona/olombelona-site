@@ -13,7 +13,7 @@
 		"legal": "mentions légales",
 		"lang": {
 			"fr": "français",
-			"en": "anglais"
+			"en": "english"
 		}
 	},
 	"en": {
@@ -29,7 +29,7 @@
 		"logout": "log out",
 		"legal": "legal notices",
 		"lang": {
-			"fr": "french",
+			"fr": "français",
 			"en": "english"
 		}
 	}

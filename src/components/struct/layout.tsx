@@ -7,8 +7,8 @@
 // REACT
 import React, { FC } from "react";
 // OTHER
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+// import Skeleton from 'react-loading-skeleton'
+// import 'react-loading-skeleton/dist/skeleton.css'
 // APP
 import { Header } from "./header";
 import { Footer } from "./footer";
@@ -34,14 +34,25 @@ const style_content_cell = {
 
 export const Layout: FC<Props> = ({children}) => {
   return (<>
-    { <Header/> || <Skeleton/> }
+    <Header/>
     <div style={style_content_box}>
       <div style={style_content_cell}>
-        {children || <Skeleton/>}
+        {children}
       </div>
     </div>
-    { <Footer/> || <Skeleton/> }
-    
-    </>
+    <Footer/>  
+  </>
   );
 };
+// export const Layout: FC<Props> = ({children}) => {
+//   return (<>
+//     { <Header/> || <Skeleton/> }
+//     <div style={style_content_box}>
+//       <div style={style_content_cell}>
+//         {children || <Skeleton/>}
+//       </div>
+//     </div>
+//     { <Footer/> || <Skeleton/> }
+//     </>
+//   );
+// };
