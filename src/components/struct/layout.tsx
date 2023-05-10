@@ -29,7 +29,6 @@ const style_content_cell = {
   paddingRight: 42,
   
   maxWidth: get_css_value("--width_content_max"),
-  // fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
 export const Layout: FC<Props> = ({children}) => {

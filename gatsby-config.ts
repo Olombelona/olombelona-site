@@ -15,6 +15,16 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    // LOADING
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `yellow`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     // FONT
     {
       resolve: "gatsby-plugin-web-font-loader",
