@@ -53,6 +53,7 @@ body {
   background: var(--color_global);
 	color: var(--color_text_dark);
   margin: 0px;
+	font-size: 1em;
 }
 
 
@@ -104,4 +105,22 @@ h2 {
 
 h3, h4, h5, h6 {
 	font-size: 1.5em;
+}
+
+
+@media only screen and (max-width: 480px) {
+	p {
+		font-size: 0.95em;
+	}
+  h1 {
+		font-size: 2.25em;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+	
+	h3, h4, h5, h6 {
+		font-size: 1.2em;
+	}
 }
