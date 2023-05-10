@@ -34,8 +34,9 @@ const style_subtitles = {
   marginLeft: 128,
   marginBottom: 42,
 }
-const current_styles = {
-  marginLeft: 42,
+const question_styles = {
+  marginLeft: 24,
+  marginBottom: -8,
 }
 
 export const RenderHome: FC<Props> =() => {
@@ -65,7 +66,7 @@ export const RenderHome: FC<Props> =() => {
   return <>
       <h1 style={style_titles}>{info.title}</h1>
       <h2 style={style_subtitles}>{info.subtitle}</h2>
-      <p style={current_styles}>{info.message}</p>
+      <h3 style={question_styles}>{info.message}</h3>
       <p>
         <ButtonCodeNav what={info.misc} to="/contact"/>
       </p>

@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `olombelona software`,
     siteUrl: `https://www.olombelona.com`,
-    version: `0.0.2`,
+    version: `0.0.3`,
     author: `stanislas Marçais / Dinh Doan Van Bien`,
     google: `nostranslate`,
   },

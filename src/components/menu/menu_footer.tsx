@@ -5,7 +5,7 @@
  */
 
 // REACT
-import React from "react";
+import React, { FC } from "react";
 import { useContext } from "react";
 // APP
 import { NavCell } from "../gui";
@@ -16,9 +16,18 @@ export function Legal() {
 	const { lang } = useContext(RegionContext);
 
 	const style_cell = {
-		padding : "0 1em",
+		paddingLeft : "0.5em",
+		textTransform: "capitalize",
 		cursor: "pointer",
 	}
 	
 	return <NavCell to="/legal" style={style_cell}>{tree[lang].legal}</NavCell>
+}
+interface Props {
+	style?: any,
+	children? : React.ReactNode;
+}
+
+export const InfoFooter: FC<Props> = ({style, children}) => {
+	return <div style={style}>{children}</div>
 }
