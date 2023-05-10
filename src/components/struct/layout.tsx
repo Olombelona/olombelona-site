@@ -13,6 +13,7 @@ import React, { FC } from "react";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { get_css_value } from "../../utils/tools";
+import './layout.css';
 
 interface Props {
   children? : React.ReactNode;
