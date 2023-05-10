@@ -20,7 +20,5 @@ Il est notre notre garant technique. Fort de plus de 25 ans d'expérience dans l
 
 Il est notre codeur créatif. Il a 23 ans d'expérience en tant qu'artiste codeur et designer graphique. Il est nottament le créateur du logiciel Romanesco, un outil de génération de formes géométriques complexes à partir d'algorithmes. 
 
-## Conclusion 
-
 Ensemble, ils forment une équipe dynamique et innovante, prête à relever les défis de demain.
 

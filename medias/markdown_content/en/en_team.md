@@ -18,3 +18,4 @@ Dinh is the mastermind behind our cutting-edge software products. He has over tw
 ## Stanislas Marçais [ Creative Director ]
 
 He is our creative coder. He has 23 years of experience as a coding artist and graphic designer. He is the inventor of the Romanesco software, a tool for creating stunning geometric shapes from algorithms.
+

@@ -1,6 +1,6 @@
 ---
-title: "Mentions légales"
 menu: "légal"
+title: "Mentions Légales"
 categorie : "legal"
 lang: "fr"
 ---

@@ -13,7 +13,7 @@ import { StaticImage } from "gatsby-plugin-image"
 // APP
 import tree from "./../../medias/tree.json";
 import { Box } from "./h_c.tsx";
-import { get_css_value, name_to_hex, hex_to_rgb, rgb_to_filter } from "../utils/h_u.tsx";
+import { get_css_value } from "../utils/h_u.tsx";
 import { RegionContext, HeaderContext } from "../context.tsx";
 
 interface DesignProps {
@@ -110,28 +110,13 @@ export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, 
 	}
   size = size.slice(0,-2);
 
-	// a trick to change the color of svg
-	let name = get_css_value("--color_2");
-  if(name === undefined) {
-    name = "black";
-  }
-	let hex = name_to_hex(name);
-	let rgb = hex_to_rgb(hex);
-  if(rgb === null) {
-    rgb = [0,0,0]; // black
-  }
-	let result = rgb_to_filter(rgb);
-	const img_style = {
-		filter: result.filter,
-	}
-
-
 	return (
     <NavCellBox to="/" className_box={className_box} style_box={style_box} className_cell={className_cell} style_cell={style_cell}>
       <div style={{maxWidth: size+"px", maxHeight:size+"px"}}>
         <StaticImage 	src="./../../medias/home.png" alt="Home" 
                       placeholder="blurred" layout="constrained"
-                      imgStyle={img_style} />
+                      // imgStyle={img_style} 
+                      />
       </div>
 	  </NavCellBox>
   )
@@ -201,10 +186,6 @@ export const DropdowRegions: FC<DropdownProps>= ({className_box, style_box, clas
 	</Dropdown>
 }
 
-/*
-		<SelectRegions  style_box={style_box} style_cell={style_cell} 
-								    values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} />
-                    */
 interface RegionProps extends DesignProps {
   children?: ReactNode,
   index: number,
@@ -212,19 +193,13 @@ interface RegionProps extends DesignProps {
 }
 
 // we cannot use key for the props because it's react reserved word
-
-// NEED TO RELOAD PAGE
-// https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
-// window.location.reload(); reload but keep the setting same
 export const Region:FC<RegionProps>= ({className_box, style_box, className_cell, style_cell, keys, index, children}) => {
 	const { set_lang } = useContext(RegionContext);
 
 
 	function mouse_click(event: { preventDefault: () => void; }) {
 		event.preventDefault();
-    // window.location.reload();
 		set_lang(keys[index]);
-    // window.location.reload();
 	}
 
 	return <Box className={className_box} style={style_box}>
