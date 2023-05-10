@@ -1,6 +1,6 @@
 ---
 menu: "contact us"
-title: "CONTACT US"
+title: "Contact Us"
 subtitle: ""
 categorie : "contact"
 message: "little message to explain what you want"

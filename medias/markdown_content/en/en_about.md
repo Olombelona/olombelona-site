@@ -1,6 +1,6 @@
 ---
 menu: "about"
-title: "ABOUT"
+title: "About"
 subtitle: ""
 categorie : "about"
 message: ""

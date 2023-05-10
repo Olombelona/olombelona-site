@@ -1,6 +1,6 @@
 ---
 menu: "team"
-title: "TEAM"
+title: "The Team"
 subtitle: ""
 categorie : "team"
 message: ""
@@ -18,7 +18,5 @@ He is our technical guarantor. With over 25 years of experience in large-scale s
 ## Stanislas Marçais [ Art Director ]
 
 He is our creative coder. He has 23 years of experience as a coding artist and graphic designer. He is notably the creator of the Romanesco software, a tool for generating complex geometric shapes from algorithms. 
-
-## Conclusion 
 
 Together, they form a dynamic and innovative team, ready to take on the challenges of tomorrow.

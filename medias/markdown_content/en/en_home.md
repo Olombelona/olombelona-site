@@ -1,6 +1,6 @@
 ---
 menu: "home"
-title: "Olombena software"
+title: "Olombelona Software"
 subtitle: "Digital design workshop"
 categorie: "home"
 message: "Creation through code?"
