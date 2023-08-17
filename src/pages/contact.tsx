@@ -9,9 +9,9 @@ import React, { FC } from "react";
 // GATSBY
 import type { HeadFC, PageProps } from "gatsby"
 // APP
-import { RenderContact } from "../render/h_r.tsx"
-import { Layout } from "../components/h_c.tsx";
-import { get_css_value } from "../utils/h_u.tsx";
+import { RenderContact } from "../render/hr.tsx"
+import { Layout } from "../components/hc.tsx";
+import { get_css_value } from "../utils/hu.tsx";
 
 
 const Contact: FC<PageProps> = () => {

@@ -8,8 +8,8 @@
 import React, { FC } from "react";
 import { useContext } from "react";
 // APP
-import { NavCellBox, Box, GoHome, DropdowRegions } from "../h_c.tsx"
-import { get_css_value } from "../../utils/h_u.tsx";
+import { NavCellBox, Box, GoHome, DropdowRegions } from "../hc.tsx"
+import { get_css_value } from "../../utils/hu.tsx";
 import tree from "./../../../medias/tree.json";
 import { RegionContext, HeaderContext } from "../../context.tsx";
 

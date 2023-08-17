@@ -12,10 +12,10 @@ import { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // APP
-import { useNode } from "../utils/h_u.tsx";
-import { ButtonCodeNav } from "../components/h_c.tsx";
+import { useNode } from "../utils/hu.tsx";
+import { ButtonCodeNav } from "../components/hc.tsx";
 import { RegionContext } from "./../context";
-import { get_css_value } from "../utils/h_u.tsx";
+import { get_css_value } from "../utils/hu.tsx";
 
 // need to define properly the any... it's very too much and very lazy !
 interface Props {

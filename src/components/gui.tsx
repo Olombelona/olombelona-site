@@ -12,8 +12,8 @@ import { navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image"
 // APP
 import tree from "./../../medias/tree.json";
-import { Box } from "./h_c.tsx";
-import { get_css_value } from "../utils/h_u.tsx";
+import { Box } from "./hc.tsx";
+import { get_css_value } from "../utils/hu.tsx";
 import { RegionContext, HeaderContext } from "../context.tsx";
 
 interface DesignProps {

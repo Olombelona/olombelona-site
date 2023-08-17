@@ -9,8 +9,8 @@ import React, { FC } from "react";
 // GATSBY
 import type { HeadFC, PageProps } from "gatsby"
 // APP
-import { RenderHome } from "../render/h_r.tsx"
-import { Layout } from "../components/h_c.tsx";
+import { RenderHome } from "../render/hr.tsx"
+import { Layout } from "../components/hc.tsx";
 
 
 const Home: FC<PageProps> = () => {

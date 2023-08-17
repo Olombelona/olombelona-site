@@ -12,8 +12,8 @@ import{ useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // APP
-import { FormNetlify, Form } from "./../components/h_c";
-import { useNode } from "../utils/h_u.tsx";
+import { FormNetlify, Form } from "../components/hc.tsx";
+import { useNode } from "../utils/hu.tsx";
 import { RegionContext } from "../context.tsx";
 
 // need to define properly the any... it's very too much and very lazy !

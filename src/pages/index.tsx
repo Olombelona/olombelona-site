@@ -24,8 +24,8 @@ import React, { FC } from "react";
 // GATSBY
 import type { HeadFC, PageProps } from "gatsby"
 // APP
-import { RenderHome, RenderAbout } from "../render/h_r.tsx"
-import { Layout } from "../components/h_c.tsx";
+import { RenderHome, RenderAbout } from "../render/hr.tsx"
+import { Layout } from "../components/hc.tsx";
 
 // Try to add meta to disable auto translate from safari and google
 // https://medium.com/yellowcode/how-to-do-meta-tags-in-gatsbyjs-45245dc68ab9

@@ -9,8 +9,8 @@ import React, { FC } from "react";
 // GATSBY
 import { graphql } from "gatsby";
 // APP
-import { Layout } from "./../components/h_c";
-import { RenderPage } from "./../render/h_r";
+import { Layout } from "../components/hc";
+import { RenderPage } from "../render/hr";
 
 /*
 it's necessary to export the Components Page as default
