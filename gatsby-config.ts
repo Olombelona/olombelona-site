@@ -6,10 +6,10 @@ require("dotenv").config();
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `olombelona software`,
+    title: `olombelona`,
     siteUrl: `https://www.olombelona.com`,
     version: `0.0.3`,
-    author: `stanislas Marçais / Dinh Doan Van Bien`,
+    author: `Stanislas Marçais / Dinh Doan Van Bien`,
     google: `nostranslate`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -48,7 +48,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Olombelona software",
+        name: "Olombelona",
         short_name: "Olombelona",
         start_url: "/",
         icon: "medias/icon.png", // This path is relative to the root of the site.
