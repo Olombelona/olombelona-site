@@ -44,4 +44,4 @@ const Contact: FC<PageProps> = () => {
 
 export default Contact;
 
-export const Head: HeadFC = () => <title>Olombelona Software</title>
+export const Head: HeadFC = () => <title>Olombelona</title>
