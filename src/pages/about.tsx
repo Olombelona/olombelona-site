@@ -24,4 +24,4 @@ const About: FC<PageProps> = () => {
 
 export default About;
 
-export const Head: HeadFC = () => <title>Olombelona Software</title>
+export const Head: HeadFC = () => <title>Olombelona</title>
