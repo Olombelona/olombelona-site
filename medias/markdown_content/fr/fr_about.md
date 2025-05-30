@@ -9,7 +9,7 @@ lang: "fr"
 ---
 # À Propos
 
-Olombelona Software vous accueille dans son univers créatif, technologique et humain.
+Olombelona vous accueille dans son univers créatif, technologique et humain.
 
 Nous créons des applications sur mesure pour tous les supports : ordinateur, téléphone. Nous vous accompagnons également dans vos projets de transformation digitale en vous apportant notre expertise et nos conseils. Notre équipe de développeurs et de designers est passionnée et expérimentée. Ils donnent vie à vos idées et vous conseillent. 
 
