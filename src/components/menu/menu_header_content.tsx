@@ -8,7 +8,7 @@
 import React, { FC } from "react";
 import { useContext } from "react";
 // APP
-import { NavCellBox, Box, GoHome, DropdowRegions } from "../hc.tsx"
+import { NavCellBox, Box, GoHome, LangToggle } from "../hc.tsx"
 import { get_css_value } from "../../utils/hu.tsx";
 import tree from "./../../../medias/tree.json";
 import { RegionContext } from "../../context.tsx";
@@ -27,7 +27,6 @@ interface Props {
 
 export const MenuHeaderContent: FC<Props> =({className_box, style_box, className_cell, style_cell, in_line}) => {
   const { lang } = useContext(RegionContext);
-	// const { other_db_is, num_item_bd } = useContext(HeaderContext);
   let hh = get_css_value("--height_header");
 	let hhc = get_css_value("--height_header_cell");
 	let height_header = 0;
@@ -61,7 +60,7 @@ export const MenuHeaderContent: FC<Props> =({className_box, style_box, className
 		{/* {in_line !== false ? <GoHome className_box={"home_box"} style_box={box} style_cell={cell}/> : <></>} */}
     <NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
-		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"}/>
+		<LangToggle style_box={box} style_cell={cell} />
 
 		{/* {in_line === true ? 
 			<DropdownRadioGroup style_box={box} style_cell={cell} offset={(height_header - height_header_cell) * 0.5+"px"} in_line={in_line} /> : 

@@ -5,7 +5,7 @@
  * 
  * */
 // REACT
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
 import { useContext } from "react";
 // GATSBY
 import { navigate } from "gatsby";
@@ -14,7 +14,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import tree from "./../../medias/tree.json";
 import { Box } from "./hc.tsx";
 import { get_css_value } from "../utils/hu.tsx";
-import { RegionContext, HeaderContext } from "../context.tsx";
+import { RegionContext, Lang } from "../context.tsx";
 
 interface DesignProps {
   className_box?: string;
@@ -112,177 +112,48 @@ export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, 
 
 
 /////////////////////////////
-/////////////////////////////
-// DROPDOWN
-////////////////////////////
+// LANG TOGGLE
 /////////////////////////////
 
+export const LangToggle: FC<DesignProps> = ({style_box, style_cell}) => {
+  const { lang, set_lang } = useContext(RegionContext);
+  const langs: Lang[] = ["fr", "en"];
 
-//////////////////
-// DROPDOWN SIMPLE
-//////////////////
-
-interface DropdownProps extends NavProps {
-  name?: string;
-  is: boolean | null;
-  set_is(action: boolean): void;
-  offset? : string;
-  value?: any;
-}
-
-export const Dropdown: FC<DropdownProps> = ({name,
-                                            className_box, style_box, className_cell, style_cell, offset,
-                                            is, set_is,  
-                                            children}) => {
-    const style_display: React.CSSProperties = {
-      display: "flex",
-      flexDirection: "column",
-      padding: offset + " 0",
-    }
-
-    function mouse_click(event: { preventDefault: () => void; }) {
-      event.preventDefault();
-      is ? set_is(false) : set_is(true); // context
-    }
-
-    // close the dropdown after use it
-    function close(event: { preventDefault: () => void; }) {
-      event.preventDefault();
-      set_is(false);
-    }
-
-    return <Box className={className_box} style={style_box}>
-      <div className={className_cell} style={style_cell} onClick={mouse_click}
-        role="button" tabIndex={0}
-        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') mouse_click(e); }}
-      >{name}</div>
-      {is ? 
-      <div style={style_display} onClick={close}>
-      {children}
-      </div> : <></>}
-    </Box>
-}
-
-
-interface DropdowRegionsProps extends DesignProps {
-  offset?: string;
-}
-
-export const DropdowRegions: FC<DropdowRegionsProps>= ({className_box, style_box, className_cell, style_cell, offset}) => {
-	const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
-	const { lang } = useContext(RegionContext);
-
-	return <Dropdown 	name={tree[lang].lang[lang]}
-										style_box={style_box} style_cell={style_cell} 
-										offset={offset}
-										is={lang_db_is} set_is={set_lang_db_is}>
-		<SelectRegions  style_box={style_box} style_cell={style_cell} 
-								    values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} />
-	</Dropdown>
-}
-
-interface RegionProps extends DesignProps {
-  children?: ReactNode,
-  index: number,
-  keys: string[],
-}
-
-// we cannot use key for the props because it's react reserved word
-export const Region:FC<RegionProps>= ({className_box, style_box, className_cell, style_cell, keys, index, children}) => {
-	const { set_lang } = useContext(RegionContext);
-
-
-	function mouse_click(event: { preventDefault: () => void; }) {
-		event.preventDefault();
-		set_lang(keys[index] as "fr" | "en");
-	}
-
-	return <Box className={className_box} style={style_box}>
-		<div className={className_cell} style={style_cell} onClick={mouse_click}
-			role="button" tabIndex={0}
-			onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') mouse_click(e); }}
-		>
-			{children}
-		</div>
-	</Box>
-}
-
-interface SelectRegionProps extends DesignProps {
-  children?: ReactNode,
-  keys: string[],
-  values?: any
-}
-
-export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, className_cell, style_cell, values, keys}) => {
-	// we cannot use key for the props because it's react reserved word
-	return <>
-		{values.map((elem : any, idx : number) => {
-			return <Region key={keys[idx]} className_box={className_box} style_box={style_box}
-										className_cell={className_cell} style_cell={style_cell}
-										keys={keys} index={idx}>
-					{elem}
-				</Region>
-		})}
-	</>	
-}
-
-//////////////////
-//
-// DON'T WORK YET
-//
-// DROPDOWN RADIO
-//
-// 
-//
-//////////////////
-
-
-/*
-export const DropdownRadio: FC<DropdownProps> = ({	name,
-                                                    className_box, style_box, className_cell, style_cell, offset,
-                                                    value, 
-                                                    children}) => {
-  // context
-  const [toggle_is, set_toggle_is] = useContext(DropdownRadioContext);
-  const checked = value === toggle_is;
-
-
-  const style_display = {
+  const style_toggle: React.CSSProperties = {
     display: "flex",
-    flexDirection: "column",
-    padding: offset + " 0",
-  }
+    alignItems: "center",
+    gap: "4px",
+  };
 
-  const style_input = {
-    height:"0px",
-    width: "0px",
-    zindex:"1",
-    opacity: "0",
-    cursor: "pointer",
-  }
+  return (
+    <Box style={style_box}>
+      <nav aria-label="Language" style={{...style_cell, ...style_toggle}}>
+        {langs.map((code, idx) => (
+          <React.Fragment key={code}>
+            {idx > 0 && (
+              <span aria-hidden="true" style={{ opacity: 0.5, userSelect: "none" }}>|</span>
+            )}
+            <button
+              lang={code}
+              aria-current={lang === code ? "true" : undefined}
+              onClick={() => set_lang(code)}
+              style={{
+                all: "unset",
+                cursor: lang === code ? "default" : "pointer",
+                fontWeight: lang === code ? 700 : 400,
+                opacity: lang === code ? 1 : 0.5,
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                color: "inherit",
+              }}
+            >
+              {tree[code].lang[code]}
+            </button>
+          </React.Fragment>
+        ))}
+      </nav>
+    </Box>
+  );
+};
 
-  // close the dropdown after use it
-  function close(event: { preventDefault: () => void; }) {
-    event.preventDefault();
-    set_toggle_is("");
-  }
-  
-  return <Box className={className_box} style={style_box}>
-			<label>
-				<input
-							style={style_input}
-							// className="dropdown_input"
-							id="radio_button"
-							value={value}
-							checked={checked}
-							type="radio"
-							onChange={({ target }) => {
-								// some code if necessary
-								set_toggle_is(target.value)}}
-						/>
-				<div className={className_cell} style={style_cell}>{name}</div>			
-			</label>	
-			{toggle_is === value ? <div onClick={close} style={style_display}>{children}</div> : <></>}
-	</Box>
-}
-*/
+
