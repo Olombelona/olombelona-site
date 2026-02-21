@@ -29,7 +29,7 @@ export const Legal: FC<Props> = ({data}) => {
 
 export default Legal;
 
-export const Head: HeadFC = () => <title>Olombelona</title>
+export const Head: HeadFC = () => <title>Olombelona — Mentions légales</title>
 
 export const myQuery = graphql`
   query {

@@ -75,6 +75,7 @@ const config: GatsbyConfig = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sitemap`,
   ],
 }
 
