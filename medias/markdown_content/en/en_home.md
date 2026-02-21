@@ -4,7 +4,7 @@ title: "Olombelona"
 subtitle: "Boutique Software Development"
 categorie: "home"
 message: "Creation through code?"
-misc: "println(”Send your project to us”);"
+misc: “Let's talk about your project”
 lang: "en"
 ---
 # Lorem Ipsum

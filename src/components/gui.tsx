@@ -22,40 +22,9 @@ interface DesignProps {
   className_cell?: string;
   style_cell?: any;
 }
-///////////////////
-// BUTTON
-///////////////////
-interface ButtonProps {
-  what: string;
-  to: string;
-}
-
 //////////////////////////
 // NAVIGATION
 ////////////////////////
-
-
-// ButtonCodeNav
-////////////////
-// in progress
-///////////////
-export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
-  const button_style = {
-    color: "yellow",
-    padding: 4,
-    background: "magenta",
-    fontSize: "1.25rem",
-    borderRadius: 4,
-    cursor: "pointer",
-  }
-
-  return (
-    <NavCell to={to}>
-        <code style={button_style}>{what}</code>
-    </NavCell>
-  )
-}
-
 
 
 /////////////

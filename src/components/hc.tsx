@@ -10,5 +10,5 @@
 export { Form, FormNetlify } from './form.tsx';
 export { MarkdownHtml } from './markdown_html.tsx';
 export { Layout } from './struct/layout.tsx';
-export { ButtonCodeNav, NavCell, NavCellBox, GoHome, LangToggle } from './gui.tsx';
+export { NavCell, NavCellBox, GoHome, LangToggle } from './gui.tsx';
 export { Box } from "./design.tsx";
