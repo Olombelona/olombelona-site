@@ -43,7 +43,7 @@ export const RegionContextProvider: FC<PropsContext> = ({children}) => {
     // https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/478
 		// language = window.navigator.userLanguage || window.navigator.language;
 	}
-	if(language !== "fr") {
+	if(!language.startsWith("fr")) {
 		language = "en";
 	}
 	

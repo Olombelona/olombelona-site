@@ -219,7 +219,7 @@ export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, c
 	// we cannot use key for the props because it's react reserved word
 	return <>
 		{values.map((elem : any, key : number) => {
-			return <Region className_box={className_box} style_box={style_box} 
+			return <Region key={key} className_box={className_box} style_box={style_box}
 										className_cell={className_cell} style_cell={style_cell}
 										keys={keys} index={key}>
 					{elem}
