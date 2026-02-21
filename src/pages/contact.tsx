@@ -18,11 +18,11 @@ const Contact: FC<PageProps> = () => {
   const style_cell = {
     width: "100px",
     height: "42px",
-    fontFamily: get_css_value("--font_title"),
+    fontFamily: get_css_value("--font_title") ?? undefined,
     fontWeight: 700,
     fontSize: 18,
-    color: get_css_value("--color_text_light"),
-    background: get_css_value("--color_button")
+    color: get_css_value("--color_text_light") ?? undefined,
+    background: get_css_value("--color_button") ?? undefined
   }
 
   const style_box = {

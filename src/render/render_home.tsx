@@ -25,7 +25,7 @@ interface Props {
 
 export const RenderHome: FC<Props> =() => {
   const style_titles = {
-    fontFamily: get_css_value("--font_title"),
+    fontFamily: get_css_value("--font_title") ?? undefined,
     marginTop: 24,
     maxWidth: 600,
   }

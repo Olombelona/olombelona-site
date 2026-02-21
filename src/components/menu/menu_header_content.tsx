@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { NavCellBox, Box, GoHome, DropdowRegions } from "../hc.tsx"
 import { get_css_value } from "../../utils/hu.tsx";
 import tree from "./../../../medias/tree.json";
-import { RegionContext, HeaderContext } from "../../context.tsx";
+import { RegionContext } from "../../context.tsx";
 
 
 
@@ -40,7 +40,7 @@ export const MenuHeaderContent: FC<Props> =({className_box, style_box, className
   const temp_box: React.CSSProperties = {
 		position: "relative",
 		top: (height_header - height_header_cell) * 0.5+"px",
-		background: get_css_value("--color_menu_big"),
+		background: get_css_value("--color_menu_big") ?? undefined,
 	};
 
   const temp_cell: React.CSSProperties = {

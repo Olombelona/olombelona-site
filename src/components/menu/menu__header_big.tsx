@@ -18,14 +18,14 @@ export function MenuHeaderBig() {
 	margin: "0 auto",
 	display: "flex",
 	justifyContent: "space-between",
-	height: get_css_value("--height_header"),
-	maxWidth: get_css_value("--width_header_max"),
+	height: get_css_value("--height_header") ?? undefined,
+	maxWidth: get_css_value("--width_header_max") ?? undefined,
   }
 
   const style_cell = {
-	width: get_css_value("--width_header_cell"),
-	height: get_css_value("--height_header_cell"),
-	fontFamily: get_css_value("--font_title"),
+	width: get_css_value("--width_header_cell") ?? undefined,
+	height: get_css_value("--height_header_cell") ?? undefined,
+	fontFamily: get_css_value("--font_title") ?? undefined,
     fontWeight: 700,
     fontSize: 20,
 	cursor: "pointer",

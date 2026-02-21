@@ -20,16 +20,16 @@ interface Props {
 }
 export const Layout: FC<Props> = ({children}) => {
   const style_content_box = {
-    background : get_css_value("--layout_bg"),
-    borderTop: "2px solid " + get_css_value("--color_line"),
+    background : get_css_value("--layout_bg") ?? undefined,
+    borderTop: `2px solid ${get_css_value("--color_line") ?? "transparent"}`,
   }
   const style_content_cell = {
-    color: get_css_value("--color_text"),
+    color: get_css_value("--color_text") ?? undefined,
     margin: "0 auto",
     paddingBottom: 24,
     paddingLeft: 42,
     paddingRight: 42,
-    maxWidth: get_css_value("--width_content_max"),
+    maxWidth: get_css_value("--width_content_max") ?? undefined,
   }
   return (<>
     <Header/>

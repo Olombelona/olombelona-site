@@ -8,6 +8,7 @@
 import React, { FC } from "react";
 // GATSBY
 import { graphql } from "gatsby";
+import type { HeadFC } from "gatsby";
 // APP
 import { Layout } from "../components/hc";
 import { RenderPage } from "../render/hr";
@@ -28,7 +29,7 @@ export const Legal: FC<Props> = ({data}) => {
 
 export default Legal;
 
-// export const Head: FC<Props> = ({data}) => <title>{data.allMarkdownRemark.edges[0].node.frontmatter.categorie}</title>
+export const Head: HeadFC = () => <title>Olombelona</title>
 
 export const myQuery = graphql`
   query {
