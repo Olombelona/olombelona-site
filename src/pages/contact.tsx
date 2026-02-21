@@ -31,7 +31,7 @@ const Contact: FC<PageProps> = () => {
 
   const style_form = {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column" as const
   }
   return (
     <Layout>

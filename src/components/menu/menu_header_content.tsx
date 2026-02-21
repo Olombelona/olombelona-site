@@ -37,13 +37,13 @@ export const MenuHeaderContent: FC<Props> =({className_box, style_box, className
 		height_header_cell = +hhc.slice(0,-2);
 	}
 
-  const temp_box = {
+  const temp_box: React.CSSProperties = {
 		position: "relative",
 		top: (height_header - height_header_cell) * 0.5+"px",
 		background: get_css_value("--color_menu_big"),
 	};
 
-  const temp_cell = {
+  const temp_cell: React.CSSProperties = {
 		whiteSpace: "nowrap",
 		position: "absolute",
 		top: "50%",

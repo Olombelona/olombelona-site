@@ -50,10 +50,7 @@ export const FormNetlify : FC<FormProps> = (props) => {
   // If I understand well the functionnement of the warning message
   return (
 		<>
-		<Form {...props} method="POST">
-		{/* <Form className={props.className} style={props.style} method="POST" data-netlify="true" {...props}> */}
-			{props.children}
-		</Form>
+		<Form {...props} method="POST" />
 		</>
   );
 }

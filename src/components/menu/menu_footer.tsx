@@ -17,7 +17,7 @@ export function Legal() {
 
 	const style_cell = {
 		paddingLeft : "0.5em",
-		textTransform: "capitalize",
+		textTransform: "capitalize" as const,
 		cursor: "pointer",
 	}
 	

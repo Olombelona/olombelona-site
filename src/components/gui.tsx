@@ -76,7 +76,10 @@ export const NavCell: FC<NavProps> = ({to, className, style, children}) => {
 		event.preventDefault();
 		if(to) navigate(to);
 	}
-	return <div className={className} style={style} onClick={mouse_click}>{children}</div>
+	return <div className={className} style={style} onClick={mouse_click}
+		role="button" tabIndex={0}
+		onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') mouse_click(e); }}
+	>{children}</div>
 }
 
 // NavCellBox
@@ -93,7 +96,7 @@ export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, classNam
 //////////////////
 export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, style_cell}) => {
 	let size = get_css_value("--height_header_cell");
-	if(size === undefined) {
+	if(!size) {
 		size = "100px";
 	}
   size = size.slice(0,-2);
@@ -152,7 +155,10 @@ export const Dropdown: FC<DropdownProps> = ({name,
     }
 
     return <Box className={className_box} style={style_box}>
-      <div className={className_cell} style={style_cell} onClick={mouse_click}>{name}</div>
+      <div className={className_cell} style={style_cell} onClick={mouse_click}
+        role="button" tabIndex={0}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') mouse_click(e); }}
+      >{name}</div>
       {is ? 
       <div style={style_display} onClick={close}>
       {children}
@@ -195,7 +201,10 @@ export const Region:FC<RegionProps>= ({className_box, style_box, className_cell,
 	}
 
 	return <Box className={className_box} style={style_box}>
-		<div className={className_cell} style={style_cell} onClick={mouse_click}>
+		<div className={className_cell} style={style_cell} onClick={mouse_click}
+			role="button" tabIndex={0}
+			onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') mouse_click(e); }}
+		>
 			{children}
 		</div>
 	</Box>

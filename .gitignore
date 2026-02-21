@@ -6,6 +6,9 @@ src/gatsby-types.d.ts
 # dotenv environment variable files
 .env*
 
+# Playwright MCP
+.playwright-mcp/
+
 # Mac files
 .DS_Store
 
