@@ -22,14 +22,6 @@ interface Props {
 }
 
 
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 42,
-  maxWidth: 600,
-}
-const headingAccentStyles = {
-  color: "magenta",
-}
 const paragraphStyles = {
   marginBottom: 48,
 }
@@ -56,8 +48,8 @@ export const RenderTeam: FC<Props> =() => {
   const { html} = useNode(data, lang);
 
   return <>
-    <p style={paragraphStyles}>
+    <div style={paragraphStyles}>
       <MarkdownHtml html={html} />
-    </p>
+    </div>
   </>
 }

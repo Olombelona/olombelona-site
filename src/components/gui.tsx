@@ -5,7 +5,7 @@
  * 
  * */
 // REACT
-import React, { FC, ReactNode, useState } from "react";
+import React, { FC, ReactNode } from "react";
 import { useContext } from "react";
 // GATSBY
 import { navigate } from "gatsby";
@@ -40,8 +40,7 @@ interface ButtonProps {
 // in progress
 ///////////////
 export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
-  let button_style = {
-  // const button_style = {
+  const button_style = {
     color: "yellow",
     padding: 4,
     background: "magenta",
@@ -50,20 +49,9 @@ export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
     cursor: "pointer",
   }
 
-  const [is, set_is] = useState(false);
-  const toggle_button = () => {
-    if (is) {
-      // button_style.background = "cyan";
-      set_is(false);
-    } else {
-      // button_style.background = "magenta";
-      set_is(true);
-    }
-  }
-
   return (
     <NavCell to={to}>
-        <code onClick={() => toggle_button()} style={button_style}>{what}</code>
+        <code style={button_style}>{what}</code>
     </NavCell>
   )
 }
@@ -75,7 +63,7 @@ export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
 /////////////
 interface NavProps extends DesignProps {
   children ?: any;
-  to: string;
+  to?: string;
   className?: string;
   style?: any;
 
@@ -86,7 +74,7 @@ interface NavProps extends DesignProps {
 export const NavCell: FC<NavProps> = ({to, className, style, children}) => {
 	function mouse_click(event: { preventDefault: () => void; }) {
 		event.preventDefault();
-		navigate(to);
+		if(to) navigate(to);
 	}
 	return <div className={className} style={style} onClick={mouse_click}>{children}</div>
 }
@@ -146,7 +134,7 @@ export const Dropdown: FC<DropdownProps> = ({name,
                                             className_box, style_box, className_cell, style_cell, offset,
                                             is, set_is,  
                                             children}) => {
-    const style_display = {
+    const style_display: React.CSSProperties = {
       display: "flex",
       flexDirection: "column",
       padding: offset + " 0",
@@ -173,7 +161,11 @@ export const Dropdown: FC<DropdownProps> = ({name,
 }
 
 
-export const DropdowRegions: FC<DropdownProps>= ({className_box, style_box, className_cell, style_cell, offset}) => {
+interface DropdowRegionsProps extends DesignProps {
+  offset?: string;
+}
+
+export const DropdowRegions: FC<DropdowRegionsProps>= ({className_box, style_box, className_cell, style_cell, offset}) => {
 	const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
 	const { lang } = useContext(RegionContext);
 
@@ -199,7 +191,7 @@ export const Region:FC<RegionProps>= ({className_box, style_box, className_cell,
 
 	function mouse_click(event: { preventDefault: () => void; }) {
 		event.preventDefault();
-		set_lang(keys[index]);
+		set_lang(keys[index] as "fr" | "en");
 	}
 
 	return <Box className={className_box} style={style_box}>
@@ -218,10 +210,10 @@ interface SelectRegionProps extends DesignProps {
 export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, className_cell, style_cell, values, keys}) => {
 	// we cannot use key for the props because it's react reserved word
 	return <>
-		{values.map((elem : any, key : number) => {
-			return <Region key={key} className_box={className_box} style_box={style_box}
+		{values.map((elem : any, idx : number) => {
+			return <Region key={keys[idx]} className_box={className_box} style_box={style_box}
 										className_cell={className_cell} style_cell={style_cell}
-										keys={keys} index={key}>
+										keys={keys} index={idx}>
 					{elem}
 				</Region>
 		})}

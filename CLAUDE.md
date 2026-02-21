@@ -18,6 +18,8 @@ Olombelona company website — a Gatsby 5 static site with React 18, TypeScript 
 
 No test framework is configured. Node version is pinned to `v18.12.1` (`.nvmrc`).
 
+- Kill port 8000 before restarting dev server: `lsof -ti:8000 | xargs kill -9`
+
 ## Environment
 
 Requires `TYPEKIT_ID` env var (Adobe Fonts kit ID) — set in `.env` files (gitignored).
@@ -61,6 +63,7 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 ### Contexts
 
 - `RegionContext` — global language state (provided in `gatsby-browser.tsx`)
+- `gatsby-ssr.tsx` mirrors `gatsby-browser.tsx` — keep both in sync when changing providers
 - `HeaderContext` — local dropdown state (provided inside `Header` component)
 
 ### GraphQL
@@ -74,6 +77,11 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 - `gatsby-plugin-fix-fouc` with 3s timeout for Flash of Unstyled Content
 - Adobe Typekit fonts loaded via `gatsby-plugin-web-font-loader`
 
+## Known Issues
+
+- `npm run typecheck` has ~15 pre-existing TS errors (missing optional props, json module resolution, flexDirection typing). The Gatsby build still succeeds — Gatsby's TS compilation is more lenient.
+
 ## Git Conventions
 
 - Do NOT add `Co-Authored-By` lines to commit messages
+- Documentation files (README, CONTRIBUTING) are written in French

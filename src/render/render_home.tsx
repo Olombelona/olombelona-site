@@ -23,23 +23,22 @@ interface Props {
 }
 
 
-const style_titles = {
-  fontFamily: get_css_value("--font_title"),
-  marginTop: 24,
-  maxWidth: 600,
-}
-const style_subtitles = {
-  color: "magenta",
-  marginTop: -24,
-  marginLeft: 128,
-  marginBottom: 42,
-}
-const question_styles = {
-  marginLeft: 24,
-  marginBottom: -8,
-}
-
 export const RenderHome: FC<Props> =() => {
+  const style_titles = {
+    fontFamily: get_css_value("--font_title"),
+    marginTop: 24,
+    maxWidth: 600,
+  }
+  const style_subtitles = {
+    color: "magenta",
+    marginTop: -24,
+    marginLeft: 128,
+    marginBottom: 42,
+  }
+  const question_styles = {
+    marginLeft: 24,
+    marginBottom: -8,
+  }
   const data = useStaticQuery(
     graphql`
       query {
@@ -67,8 +66,8 @@ export const RenderHome: FC<Props> =() => {
       <h1 style={style_titles}>{info.title}</h1>
       <h2 style={style_subtitles}>{info.subtitle}</h2>
       <h3 style={question_styles}>{info.message}</h3>
-      <p>
+      <div>
         <ButtonCodeNav what={info.misc} to="/contact"/>
-      </p>
+      </div>
   </>
 }

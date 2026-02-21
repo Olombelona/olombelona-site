@@ -8,7 +8,7 @@
 
 //REACT
 import React, { FC } from "react";
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext } from "react";
 
 interface PropsContext {
   children? : React.ReactNode;
@@ -22,12 +22,14 @@ interface PropsContext {
 * it use at the top level in the gatsby-browser.js
 */
 
+export type Lang = "fr" | "en";
+
 type type_region_context = {
-  lang: string | null,
-  set_lang: (newValue : string) => void
+  lang: Lang,
+  set_lang: (newValue : Lang) => void
 };
 
-const init_region_context = {
+const init_region_context: type_region_context = {
   lang: "en",
   set_lang: function() {}
 };
@@ -36,18 +38,15 @@ export const RegionContext = createContext<type_region_context>(init_region_cont
 
 export const RegionContextProvider: FC<PropsContext> = ({children}) => {
 	const browser_is = typeof window !== "undefined";
-	let language = "fr"
+	let language: Lang = "fr"
   if(browser_is) {
-    language = window.navigator.language;
-    // Problem with this feature in typeScript, maybe becaise it's obsolete ???
-    // https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/478
-		// language = window.navigator.userLanguage || window.navigator.language;
+    const nav_lang = window.navigator.language;
+    if(!nav_lang.startsWith("fr")) {
+		  language = "en";
+	  }
 	}
-	if(!language.startsWith("fr")) {
-		language = "en";
-	}
-	
-  const [lang, set_lang] = useState(language);
+
+  const [lang, set_lang] = useState<Lang>(language);
 
 	const setting = {
 		lang, set_lang

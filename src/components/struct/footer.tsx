@@ -12,26 +12,23 @@ import { useStaticQuery, graphql } from "gatsby";
 import { get_css_value } from "../../utils/tools";
 import { Legal, InfoFooter } from "../menu/menu_footer";
 
-const style_footer = {
+export function Footer() {
+  const style_footer = {
 	margin: "auto 0",
 	display: "flex",
 	alignItems: "center",
 	justifyContent : "center",
 	width: "100%",
 	height: "50px",
-  color: get_css_value("--color_text_light"),
+    color: get_css_value("--color_text_light"),
 	background: get_css_value("--color_footer"),
-}
+  }
 
-const style_cell = {
+  const style_cell = {
 	paddingLeft : "0.5em",
 	paddingRight : "0.5em",
-	textTransform: "capitalize",
-}
-
-
-
-export function Footer() {
+	textTransform: "capitalize" as const,
+  }
 	const data = useStaticQuery(
     graphql`
 			query {

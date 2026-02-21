@@ -63,8 +63,8 @@ export const RenderAbout: FC<Props> =() => {
 
   return <>
     <h2 style={headingStyles}>{info.subtitle}</h2>
-    <p style={paragraphStyles}>
+    <div style={paragraphStyles}>
       <MarkdownHtml html={html} />
-    </p>
+    </div>
   </>
 }

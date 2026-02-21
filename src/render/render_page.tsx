@@ -16,6 +16,7 @@ interface Props {
 }
 export const RenderPage: FC<Props> = ({data}) => {
   const { lang } = useContext(RegionContext);
+  if (!data.allMarkdownRemark.edges.length) return null;
   let title = data.allMarkdownRemark.edges[0].node.frontmatter.title;
   let html = data.allMarkdownRemark.edges[0].node.html;
 
