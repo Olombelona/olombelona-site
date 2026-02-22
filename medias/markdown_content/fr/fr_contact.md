@@ -1,7 +1,7 @@
 ---
 menu: "contact us"
-title: "Contactez-nous"
-subtitle: ""
+title: "Écrivez-nous"
+subtitle: "Nous lisons chaque message. Dites-nous sur quoi vous travaillez."
 categorie : "contact"
 message: "Parlez-nous de votre projet"
 misc: ""

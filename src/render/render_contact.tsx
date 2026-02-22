@@ -33,6 +33,7 @@ export const RenderContact: FC<Props> =({style_box, style_cell, style_form}) => 
             node {
               frontmatter {
                 title
+                subtitle
                 lang
                 firstname
                 lastname
@@ -52,6 +53,7 @@ export const RenderContact: FC<Props> =({style_box, style_cell, style_form}) => 
   const info = frontmatter;
   return <>
     <h1>{info.title}</h1>
+    {info.subtitle && <p>{info.subtitle}</p>}
     {/* <ContentMarkdownHtml html={node.html} /> */}
     <FormNetlify style={style_form} id_name="contact">
       {/* The dot notation give the opportunity to only load Form */}
