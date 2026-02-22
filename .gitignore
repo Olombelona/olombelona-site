@@ -9,6 +9,9 @@ src/gatsby-types.d.ts
 # Playwright MCP
 .playwright-mcp/
 
+# Git worktrees
+.worktrees/
+
 # Mac files
 .DS_Store
 
