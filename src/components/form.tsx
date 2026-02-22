@@ -60,7 +60,7 @@ export const FormNetlify : FC<FormProps> = (props) => {
 const FormInput: FC<FormFieldProps> = ({className_box, style_box, className_cell, style_cell, type, name, placeholder}) => {
 	return <div className={className_box} style={style_box}>
 		<label>
-			<input className={className_cell} style={style_cell} type={type} name={name} placeholder={placeholder} />
+			<input className={className_cell} style={style_cell} type={type} name={name} placeholder={placeholder} aria-label={placeholder} />
 		</label>
 	</div>
 }
@@ -69,7 +69,7 @@ const FormInput: FC<FormFieldProps> = ({className_box, style_box, className_cell
 const FormTextArea: FC<FormFieldProps> =({className_box, style_box, className_cell, style_cell, placeholder, name}) => {
 	return <div className={className_box} style={style_box}>
 		<label>
-			<textarea className={className_cell} style={style_cell} name={name} placeholder={placeholder}/>
+			<textarea className={className_cell} style={style_cell} name={name} placeholder={placeholder} aria-label={placeholder}/>
 		</label>
 	</div>
 }

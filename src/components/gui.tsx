@@ -77,7 +77,7 @@ export const ButtonCodeNav: FC<ButtonProps> = ({what, to}) => {
   }
   return (
     <NavCell to={to}>
-      <code style={button_style}>{what}</code>
+      <span style={button_style}>{what}</span>
     </NavCell>
   )
 }
@@ -130,13 +130,14 @@ export const LangToggle: FC<DesignProps> = ({style_box, style_cell}) => {
               aria-current={lang === code ? "true" : undefined}
               onClick={() => set_lang(code)}
               style={{
-                all: "unset",
+                background: "none",
+                border: "none",
+                padding: 0,
+                font: "inherit",
+                color: "inherit",
                 cursor: lang === code ? "default" : "pointer",
                 fontWeight: lang === code ? 700 : 400,
                 opacity: lang === code ? 1 : 0.5,
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                color: "inherit",
               }}
             >
               {tree[code].lang[code]}

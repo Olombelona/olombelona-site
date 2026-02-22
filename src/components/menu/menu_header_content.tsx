@@ -56,10 +56,12 @@ export const MenuHeaderContent: FC<Props> =({className_box, style_box, className
 
 	// may be this elements can be passed like a children ????
   return <Box className={className_box} style={style_box}>
-		{in_line !== false ? <GoHome style_box={box} style_cell={cell}/> : <></>}
-		{/* {in_line !== false ? <GoHome className_box={"home_box"} style_box={box} style_cell={cell}/> : <></>} */}
-    <NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
-		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+		<nav aria-label="Navigation principale" style={{display: "contents"}}>
+			{in_line !== false ? <GoHome style_box={box} style_cell={cell}/> : <></>}
+			{/* {in_line !== false ? <GoHome className_box={"home_box"} style_box={box} style_cell={cell}/> : <></>} */}
+			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
+			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+		</nav>
 		<LangToggle style_box={box} style_cell={cell} />
 
 		{/* {in_line === true ? 

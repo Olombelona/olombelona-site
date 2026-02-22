@@ -32,13 +32,14 @@ export const Layout: FC<Props> = ({children}) => {
     maxWidth: get_css_value("--width_content_max") ?? "800px",
   }
   return (<>
+    <a href="#main-content" className="skip-link">Skip to content</a>
     <Header/>
-    <div style={style_content_box}>
+    <main id="main-content" style={style_content_box}>
       <div style={style_content_cell}>
         {children}
       </div>
-    </div>
-    <Footer/>  
+    </main>
+    <Footer/>
   </>
   );
 };

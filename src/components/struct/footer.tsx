@@ -43,9 +43,9 @@ export function Footer() {
 	)
 
 	const year = new Date().getFullYear();
-	return <div className="footer" style={style_footer}>
+	return <footer className="footer" style={style_footer}>
 		<InfoFooter style={style_cell}>{data.site.siteMetadata.title} {year}</InfoFooter>
-		<InfoFooter style={style_cell}>|</InfoFooter>
+		<span aria-hidden="true" style={style_cell}>|</span>
 		<Legal/>
-	</div>
+	</footer>
 }

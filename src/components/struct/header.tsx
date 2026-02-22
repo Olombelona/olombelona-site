@@ -14,5 +14,5 @@ interface PropsHeader {
 }
 
 export const Header: FC<PropsHeader> = () => {
-  return <MenuHeaderBig/>
+  return <header><MenuHeaderBig/></header>
 }
