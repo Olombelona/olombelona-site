@@ -1,7 +1,7 @@
 ---
 menu: "team"
 title: "Meet Our Team"
-subtitle: "The brains behind our innovative software solutions"
+subtitle: "The people behind the work"
 categorie : "team"
 message: ""
 misc: ""
@@ -9,20 +9,19 @@ lang: "en"
 ---
 # Our Team
 
-Our management team consists of three brilliant professionals who have extensive experience and skills in their domains.  
-
 ## Dinh Doan Van Bien [ Chief Technology Officer ]
 
-Dinh Doan Van Bien is the mastermind behind our cutting-edge software products. He has over two decades of experience in leading and delivering software projects for some of the world's most renowned companies, such as Amazon and Microsoft, where he is a Principal Software Engineering Manager. He is an avid coder, software architect and an artificial intelligence enthusiast. Dinh inspires our team with his professional and technical knowledge and vision.
+Dinh has spent over two decades building software at scale — including as Software Engineering Manager at Amazon and Microsoft. At Olombelona, he leads architecture and engineering, and brings rigour to every technical challenge.
 
 ## Stanislas Marçais [ Creative Director ]
 
-Stanislas Marçais is our creative director and coder. He has 23 years of experience as a coding artist and graphic designer. He is the inventor of the Romanesco software, an open source platform for creating stunning geometric shapes from algorithms. Stanislas is motivated by meaningful impact and creating equity across creator and user experiences.
+Stanislas has 23 years of experience as a developer and visual designer. He's the creator of Romanesco, an open-source tool that generates complex geometric shapes through algorithms. At Olombelona, he leads creative direction and front-end craft.
 
 ## Lakshmi Kalimireddi [ Marketing Operations Manager ]
 
-Lakshmi Kalimireddi is a seasoned marketing and operations professional with over 15 years of digital marketing and marketing operations experience. She is a data-oriented critical thinker, using her ability to read and translate data to provide actionable insights and quantifiable improvement in campaign performance, ROI, and resource and workflow efficiencies. 
+Lakshmi Kalimireddi is a seasoned marketing and operations professional with over 15 years of digital marketing and marketing operations experience. She is a data-oriented critical thinker, using her ability to read and translate data to provide actionable insights and quantifiable improvement in campaign performance, ROI, and resource and workflow efficiencies.
 As both a team leader and collaborator, Lakshmi blends strategic vision with hands-on execution to deliver impactful marketing outcomes.
 
+---
 
-Together they deliver strategic guidance, technical and creative expertise, and quality results in the digital transformation space.
+Each has led complex projects independently. At Olombelona, they work as one team.

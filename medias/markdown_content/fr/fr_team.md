@@ -1,29 +1,27 @@
 ---
 menu: "team"
 title: "Équipe"
-subtitle: ""
+subtitle: "Qui nous sommes"
 categorie : "team"
 message: ""
 misc: ""
 lang: "fr"
 ---
-# L'équipe
-
-Nous sommes fiers de vous présenter notre équipe de direction, qui réunit trois experts de haut niveau dans leurs domaines respectifs.  
+# L’équipe
 
 ## Dinh Doan Van Bien [ directeur technique ]
 
-Dinh Doan Van Bien est notre notre garant technique. Fort de plus de 25 ans d'expérience dans le développement de logiciels à grande échelle, il a travaillé chez Amazon et Microsoft, où il occupe le poste de Principal Software Engineering Manager. Il est passionné par le code sous toutes ses formes, l'architecture logicielle et l'intelligence artificielle.
-
+Dinh a passé plus de vingt ans à concevoir des logiciels à grande échelle — notamment en tant que Software Engineering Manager chez Amazon et Microsoft. Chez Olombelona, il pilote les choix techniques et apporte rigueur et méthode à chaque projet.
 
 ## Stanislas Marçais [ directeur artistique ]
 
-Stanislas Marçais est notre codeur créatif. Il a 23 ans d'expérience en tant qu'artiste codeur et designer graphique. Il est nottament le créateur du logiciel Romanesco, un outil de génération de formes géométriques complexes à partir d'algorithmes. 
+Stanislas cumule 23 ans d’expérience comme développeur et designer graphique. Il est notamment le créateur de Romanesco, un logiciel open source de génération de formes géométriques complexes à partir d’algorithmes. Chez Olombelona, il dirige la direction artistique et l’intégration front-end.
 
 ## Lakshmi Kalimireddi [ directrice marketing ]
 
-Lakshmi Kalimireddi est une professionnelle expérimentée du marketing et des opérations, forte de plus de quinze ans d’expertise dans le marketing digital et la gestion des opérations marketing. Dotée d’un esprit analytique et rigoureux, elle sait exploiter les données avec finesse pour en extraire des enseignements concrets, permettant d’optimiser la performance des campagnes, d’améliorer le retour sur investissement et de renforcer l’efficacité des ressources et des processus.
-À la fois stratège et opérationnelle, Lakshmi conjugue leadership et esprit d’équipe pour concevoir et mettre en œuvre des actions marketing à fort impact.
+Lakshmi a plus de quinze ans d’expérience en marketing digital et en opérations. Elle a piloté des campagnes dans de nombreux secteurs avec une approche centrée sur les données et les résultats mesurables. Chez Olombelona, elle pilote la stratégie marketing et les relations clients.
 
-Ensemble, ils forment une équipe dynamique et innovante, prête à relever les défis de demain.
+---
+
+Chacun a mené des projets complexes de façon indépendente. Chez Olombelona, ils travaillent en équipe.
 

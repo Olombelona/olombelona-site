@@ -9,12 +9,8 @@ lang: "fr"
 ---
 # À Propos
 
-Olombelona vous accueille dans son univers créatif, technologique et humain.
+Olombelona est un atelier logiciel sur mesure. Nous concevons des applications web, mobiles et desktop, et accompagnons les entreprises dans leur transformation digitale — avec pragmatisme, sans jargon.
 
-Nous créons des applications sur mesure pour tous les supports : ordinateur, téléphone. Nous vous accompagnons également dans vos projets de transformation digitale en vous apportant notre expertise et nos conseils. Notre équipe de développeurs et de designers est passionnée et expérimentée. Ils donnent vie à vos idées et vous conseillent. 
-
-Quel que soit votre besoin - une application sur mesure, un site vitrine ou d'e-commerce, des conseils stratégiques sur la meilleure manière de tirer partie des technologies numériques pour votre entreprise - nous sommes là pour vous aider.
-
-Contactez-nous dès aujourd'hui pour démarrer votre projet.
+Notre équipe est volontairement petite : des développeurs, des designers et des consultants qui s'impliquent dans chaque projet, du brief au lancement. Si vous avez un projet, parlons-en.
 
 
