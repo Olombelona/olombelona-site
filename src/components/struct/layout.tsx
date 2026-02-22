@@ -29,7 +29,7 @@ export const Layout: FC<Props> = ({children}) => {
     paddingBottom: 24,
     paddingLeft: 42,
     paddingRight: 42,
-    maxWidth: get_css_value("--width_content_max") ?? undefined,
+    maxWidth: get_css_value("--width_content_max") ?? "800px",
   }
   return (<>
     <Header/>

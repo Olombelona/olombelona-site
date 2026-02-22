@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 // APP
 import { useNode } from "../utils/hu.tsx";
-import { NavCell } from "../components/hc.tsx";
+import { ButtonCodeNav } from "../components/hc.tsx";
 import { RegionContext } from "./../context";
 import { get_css_value } from "../utils/hu.tsx";
 
@@ -37,7 +37,6 @@ export const RenderHome: FC<Props> =() => {
   }
   const question_styles = {
     marginLeft: 24,
-    marginBottom: -8,
   }
   const data = useStaticQuery(
     graphql`
@@ -67,16 +66,7 @@ export const RenderHome: FC<Props> =() => {
       <h2 style={style_subtitles}>{info.subtitle}</h2>
       <h3 style={question_styles}>{info.message}</h3>
       <div>
-        <NavCell to="/contact" style={{ display: "inline-block", marginTop: 8 }}>
-          <span style={{
-            fontFamily: get_css_value("--font_current") ?? undefined,
-            fontSize: "1.25rem",
-            color: "darkmagenta",
-            borderBottom: "2px solid magenta",
-            paddingBottom: 2,
-            cursor: "pointer",
-          }}>{info.misc}</span>
-        </NavCell>
+        <ButtonCodeNav what={info.misc} to="/contact"/>
       </div>
   </>
 }

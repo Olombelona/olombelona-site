@@ -59,6 +59,29 @@ export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, classNam
 		</Box>
 }
 
+// ButtonCodeNav
+/////////////////
+interface ButtonProps {
+  what: string;
+  to: string;
+}
+
+export const ButtonCodeNav: FC<ButtonProps> = ({what, to}) => {
+  const button_style = {
+    color: "yellow",
+    padding: 4,
+    background: "magenta",
+    fontSize: "1.25rem",
+    borderRadius: 4,
+    cursor: "pointer",
+  }
+  return (
+    <NavCell to={to}>
+      <code style={button_style}>{what}</code>
+    </NavCell>
+  )
+}
+
 
 
 // GO HOME
