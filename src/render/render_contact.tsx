@@ -8,9 +8,8 @@
 // REACT
 import React, { FC } from "react";
 import { useContext } from "react";
-import { Link } from "gatsby";
 // GATSBY
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 // APP
 import { FormNetlify, Form } from "../components/hc.tsx";

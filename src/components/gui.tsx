@@ -127,7 +127,7 @@ export const LangToggle: FC<DesignProps> = ({style_box, style_cell}) => {
             )}
             <button
               lang={code}
-              aria-current={lang === code ? "true" : undefined}
+              aria-pressed={lang === code}
               onClick={() => set_lang(code)}
               style={{
                 background: "none",

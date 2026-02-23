@@ -36,8 +36,9 @@ export const Form: FC<FormProps> & {  Input: typeof FormInput,
                                   TextArea: typeof FormTextArea,
                                   Submit: typeof FormSubmit,} = (props) => {
 	return (
-    <form name={props.id_name} method={props.method} data-netlify="true">
+    <form name={props.id_name} method={props.method} data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value={props.form_name ?? props.id_name} />
+      <input type="hidden" name="bot-field" />
 			<div className={props.className} style={props.style}>
 				{props.children}
 			</div>
