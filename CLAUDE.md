@@ -13,12 +13,12 @@ Olombelona company website — a Gatsby 5 static site with React 18, TypeScript 
 | `npm run develop` | Start Gatsby dev server |
 | `npm run build` | Production build |
 | `npm run serve` | Serve production build locally |
-| `npm run clean` | Clear Gatsby cache |
+| `npm run clean` | Clear Gatsby cache — run after plugin/config changes or when data looks stale |
 | `npm run typecheck` | TypeScript type-check (`tsc --noEmit`) |
 
 No test framework is configured. Node version is pinned to `v18.20.8` (`.nvmrc`).
 
-- Kill port before restarting dev server: `lsof -ti:8000 | xargs kill -9` (adjust port as needed)
+- Kill port before restarting dev server: `lsof -ti:PORT | xargs kill -9` — default is 8000, pass `--port XXXX` to use another
 - Trigger a Netlify rebuild without a code change: `git commit --allow-empty -m "..." && git push`
 
 ## Environment
@@ -35,6 +35,8 @@ Frontmatter schema: `categorie` (home|about|team|contact|legal|privacy), `lang` 
 
 Adding a new frontmatter field to contact markdown requires updating the GraphQL query in `src/render/render_contact.tsx` too.
 
+New pages should follow the `privacy.tsx` pattern (page-level `graphql` export + `RenderPage`). Exception: `legal.tsx` uses the same pattern but predates it — both work identically.
+
 UI navigation labels live in `medias/tree.json`, keyed by language.
 
 ### i18n Pattern
@@ -42,6 +44,7 @@ UI navigation labels live in `medias/tree.json`, keyed by language.
 - `RegionContext` (provided globally in `gatsby-browser.tsx`) holds `lang` and `set_lang`
 - Language initialises as `"fr"` at SSR and post-hydration (via `useEffect` in `src/context.tsx`). Detection uses `localStorage` first, then `window.navigator.language`. Never read client-only values (`localStorage`, `navigator`) in `useState` initialiser — causes React hydration errors (#418).
 - Render components use `useStaticQuery` to fetch all edges for a `categorie`, then `useNode(data, lang)` selects the correct language node
+- All `window`/`document`/`localStorage` access must be guarded with `typeof window !== "undefined"` — Gatsby runs components server-side during build
 
 ### Barrel Files (C-style "headers")
 
@@ -72,7 +75,6 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 ### GraphQL
 
 - Render components use `useStaticQuery(graphql`...`)` filtered by `frontmatter.categorie`
-- Exception: `legal.tsx` uses a page-level `graphql` export query (data passed as page props)
 
 ### Deployment
 
