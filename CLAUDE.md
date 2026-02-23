@@ -16,9 +16,10 @@ Olombelona company website — a Gatsby 5 static site with React 18, TypeScript 
 | `npm run clean` | Clear Gatsby cache |
 | `npm run typecheck` | TypeScript type-check (`tsc --noEmit`) |
 
-No test framework is configured. Node version is pinned to `v18.12.1` (`.nvmrc`).
+No test framework is configured. Node version is pinned to `v18.20.8` (`.nvmrc`).
 
-- Kill port 8000 before restarting dev server: `lsof -ti:8000 | xargs kill -9`
+- Kill port before restarting dev server: `lsof -ti:8000 | xargs kill -9` (adjust port as needed)
+- Trigger a Netlify rebuild without a code change: `git commit --allow-empty -m "..." && git push`
 
 ## Environment
 
@@ -30,14 +31,16 @@ Requires `TYPEKIT_ID` env var (Adobe Fonts kit ID) — set in `.env` files (giti
 
 Markdown files in `medias/markdown_content/{fr,en}/` → `gatsby-source-filesystem` → `gatsby-transformer-remark` → GraphQL nodes with `frontmatter` + `html` → render components query by `categorie` and filter by `lang` via the `useNode()` hook.
 
-Frontmatter schema: `categorie` (home|about|team|contact|legal), `lang` (en|fr), `title`, `subtitle`, `message`, `misc`, `menu`.
+Frontmatter schema: `categorie` (home|about|team|contact|legal|privacy), `lang` (en|fr), `title`, `subtitle`, `message`, `misc`, `menu`, `privacy_link`.
+
+Adding a new frontmatter field to contact markdown requires updating the GraphQL query in `src/render/render_contact.tsx` too.
 
 UI navigation labels live in `medias/tree.json`, keyed by language.
 
 ### i18n Pattern
 
 - `RegionContext` (provided globally in `gatsby-browser.tsx`) holds `lang` and `set_lang`
-- Language detected from `window.navigator.language` at runtime; defaults to `fr`, uses `en` for non-French
+- Language initialises as `"fr"` at SSR and post-hydration (via `useEffect` in `src/context.tsx`). Detection uses `localStorage` first, then `window.navigator.language`. Never read client-only values (`localStorage`, `navigator`) in `useState` initialiser — causes React hydration errors (#418).
 - Render components use `useStaticQuery` to fetch all edges for a `categorie`, then `useNode(data, lang)` selects the correct language node
 
 ### Barrel Files (C-style "headers")
@@ -63,7 +66,7 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 ### Contexts
 
 - `RegionContext` — global language state (provided in `gatsby-browser.tsx`)
-- `gatsby-ssr.tsx` mirrors `gatsby-browser.tsx` — keep both in sync when changing providers
+- `gatsby-ssr.tsx` mirrors `gatsby-browser.tsx` — keep both in sync when changing providers. Changes to `gatsby-ssr.tsx` require a full dev server restart (not hot-reload).
 - `HeaderContext` — local dropdown state (provided inside `Header` component)
 
 ### GraphQL
@@ -79,7 +82,14 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 
 ## Known Issues
 
-- `npm run typecheck` has ~15 pre-existing TS errors (missing optional props, json module resolution, flexDirection typing). The Gatsby build still succeeds — Gatsby's TS compilation is more lenient.
+- `npm run typecheck` is currently clean (errors resolved).
+
+## Netlify
+
+- Netlify site ID: `9cfb45e7-5082-45da-8c41-401d2ae5f6f7`
+- Node version is controlled by the **Dependency management** UI setting at `/configuration/deploys`, not by `NODE_VERSION` env var (UI always wins). Must be `18.x` — `@netlify/plugin-gatsby` is auto-installed and has Node constraints.
+- To remove an auto-installed plugin via API: `curl -X DELETE -H "Authorization: Bearer $TOKEN" "https://api.netlify.com/api/v1/sites/9cfb45e7-5082-45da-8c41-401d2ae5f6f7/plugins/@netlify%2Fplugin-name"`
+- `gatsby-plugin-sitemap` was removed — no sitemap is generated (intentional, low-profile site).
 
 ## Git Conventions
 
