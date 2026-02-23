@@ -12,10 +12,8 @@ lang: "fr"
 93310 Le Pré-Saint-Gervais
 France
 
-SIRET : [à renseigner]
+SIRET : 925 005 035 00017
 Contact : contact@olombelona.com
-
-Directeur de la publication : [nom du représentant légal]
 
 ## Hébergement
 
