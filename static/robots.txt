@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://www.olombelona.com/sitemap-index.xml
+Disallow: /
