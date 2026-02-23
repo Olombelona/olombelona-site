@@ -39,26 +39,23 @@ export const RegionContext = createContext<type_region_context>(init_region_cont
 const LANG_STORAGE_KEY = "olombelona_lang";
 
 export const RegionContextProvider: FC<PropsContext> = ({children}) => {
-	const browser_is = typeof window !== "undefined";
-	let language: Lang = "fr";
-  if (browser_is) {
-    const stored = localStorage.getItem(LANG_STORAGE_KEY) as Lang | null;
-    if (stored === "fr" || stored === "en") {
-      language = stored;
-    } else {
-      const nav_lang = window.navigator.language;
-      if (!nav_lang.startsWith("fr")) {
-        language = "en";
-      }
-    }
-  }
-
-  const [lang, set_lang_state] = useState<Lang>(language);
+  // Always initialise with "fr" to match SSR — client language is resolved
+  // after hydration in the useEffect below, avoiding hydration mismatches.
+  const [lang, set_lang_state] = useState<Lang>("fr");
 
   const set_lang = (newLang: Lang) => {
-    if (browser_is) localStorage.setItem(LANG_STORAGE_KEY, newLang);
+    localStorage.setItem(LANG_STORAGE_KEY, newLang);
     set_lang_state(newLang);
   };
+
+  useEffect(() => {
+    const stored = localStorage.getItem(LANG_STORAGE_KEY) as Lang | null;
+    if (stored === "fr" || stored === "en") {
+      set_lang_state(stored);
+    } else if (!window.navigator.language.startsWith("fr")) {
+      set_lang_state("en");
+    }
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang;
