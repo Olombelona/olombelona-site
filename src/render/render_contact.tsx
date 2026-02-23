@@ -7,7 +7,8 @@
 
 // REACT
 import React, { FC } from "react";
-import{ useContext } from "react";
+import { useContext } from "react";
+import { Link } from "gatsby";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -40,6 +41,8 @@ export const RenderContact: FC<Props> =({style_box, style_cell, style_form}) => 
                 mail
                 message
                 send
+                misc
+                privacy_link
               }
             }
           }
@@ -63,5 +66,8 @@ export const RenderContact: FC<Props> =({style_box, style_cell, style_form}) => 
       <Form.TextArea name="message" placeholder={info.message}/>
       <Form.Submit style_box={style_box} style_cell={style_cell} type="submit">{info.send}</Form.Submit>
     </FormNetlify>
+    {info.misc && <p style={{fontSize: "0.8em", opacity: 0.7, marginTop: "0.75em"}}>
+      {info.misc} <Link to="/privacy">{info.privacy_link}</Link>.
+    </p>}
   </>
 }
