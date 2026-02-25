@@ -70,6 +70,7 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 
 - `RegionContext` — global language state (provided in `gatsby-browser.tsx`)
 - `gatsby-ssr.tsx` mirrors `gatsby-browser.tsx` — keep both in sync when changing providers. Changes to `gatsby-ssr.tsx` require a full dev server restart (not hot-reload).
+- `onRenderBody` in `gatsby-ssr.tsx` accepts `{ setHeadComponents, setHtmlAttributes }` — use to inject global `<meta>` tags or set `<html lang>`.
 - `HeaderContext` — local dropdown state (provided inside `Header` component)
 
 ### GraphQL
@@ -89,6 +90,8 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 ## Netlify
 
 - Netlify site ID: `9cfb45e7-5082-45da-8c41-401d2ae5f6f7`
+- Monitor deploy status: `curl -s -H "Authorization: Bearer $TOKEN" "https://api.netlify.com/api/v1/sites/9cfb45e7-5082-45da-8c41-401d2ae5f6f7/deploys?per_page=1" | python3 -c "import sys,json; d=json.load(sys.stdin)[0]; print(d['state'], d.get('error_message',''))"`
+- Dismiss Dependabot alerts (Gatsby internals are not exploitable in a static site): `gh api repos/Olombelona/olombelona-site/dependabot/alerts/NUM --method PATCH --field state=dismissed --field dismissed_reason=tolerable_risk --field dismissed_comment="..."`
 - Node version is controlled by the **Dependency management** UI setting at `/configuration/deploys`, not by `NODE_VERSION` env var (UI always wins). Must be `18.x` — `@netlify/plugin-gatsby` is auto-installed and has Node constraints.
 - To remove an auto-installed plugin via API: `curl -X DELETE -H "Authorization: Bearer $TOKEN" "https://api.netlify.com/api/v1/sites/9cfb45e7-5082-45da-8c41-401d2ae5f6f7/plugins/@netlify%2Fplugin-name"`
 - `gatsby-plugin-sitemap` was removed — no sitemap is generated (intentional, low-profile site).
