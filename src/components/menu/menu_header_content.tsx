@@ -62,7 +62,7 @@ export const MenuHeaderContent: FC<Props> =({className_box, style_box, className
 			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
 		</nav>
-		<LangToggle style_box={box} style_cell={cell} />
+		<LangToggle className_box="header-lang" style_box={box} style_cell={cell} />
 
 		{/* {in_line === true ? 
 			<DropdownRadioGroup style_box={box} style_cell={cell} offset={(height_header - height_header_cell) * 0.5+"px"} in_line={in_line} /> : 

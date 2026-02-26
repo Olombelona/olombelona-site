@@ -107,7 +107,7 @@ export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, 
 // LANG TOGGLE
 /////////////////////////////
 
-export const LangToggle: FC<DesignProps> = ({style_box, style_cell}) => {
+export const LangToggle: FC<DesignProps> = ({className_box, style_box, style_cell}) => {
   const { lang, set_lang } = useContext(RegionContext);
   const langs: Lang[] = ["fr", "en"];
 
@@ -118,7 +118,7 @@ export const LangToggle: FC<DesignProps> = ({style_box, style_cell}) => {
   };
 
   return (
-    <Box style={style_box}>
+    <Box className={className_box} style={style_box}>
       <nav aria-label="Language" style={{...style_cell, ...style_toggle}}>
         {langs.map((code, idx) => (
           <React.Fragment key={code}>
