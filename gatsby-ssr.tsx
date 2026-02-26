@@ -16,6 +16,7 @@ export const onRenderBody = ({
 }) => {
   setHtmlAttributes({ lang: "fr" });
   setHeadComponents([
+    <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />,
     <meta key="robots" name="robots" content="noindex, nofollow" />,
   ]);
 };

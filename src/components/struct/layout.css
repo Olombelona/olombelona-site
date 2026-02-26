@@ -110,6 +110,7 @@ textarea {
 .header {
 	background: var(--color_header);
 	color:var(--color_text_title);
+	padding-top: env(safe-area-inset-top);
 }
 
 h1, h2, h3, h4, h5, h6 {
