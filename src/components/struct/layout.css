@@ -137,6 +137,15 @@ h3, h4, h5, h6 {
     font-size: 20px;
 }
 
+#main-content {
+	border-top: 2px solid var(--color_line);
+}
+
+.footer {
+	background: var(--color_footer);
+	color: var(--color_text_light);
+}
+
 @media only screen and (max-width: 480px) {
 	p {
 		font-size: 0.95em;

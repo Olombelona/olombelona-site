@@ -21,7 +21,6 @@ interface Props {
 export const Layout: FC<Props> = ({children}) => {
   const style_content_box = {
     background : get_css_value("--layout_bg") ?? undefined,
-    borderTop: `2px solid ${get_css_value("--color_line") ?? "transparent"}`,
   }
   const style_content_cell = {
     color: get_css_value("--color_text") ?? undefined,
