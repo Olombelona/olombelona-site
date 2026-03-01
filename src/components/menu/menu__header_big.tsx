@@ -23,11 +23,10 @@ export function MenuHeaderBig() {
   }
 
   const style_cell = {
-	width: get_css_value("--width_header_cell") ?? undefined,
+	width: "min(100px, 25%)",
 	height: get_css_value("--height_header_cell") ?? undefined,
 	fontFamily: get_css_value("--font_title") ?? undefined,
     fontWeight: 700,
-    fontSize: 20,
 	cursor: "pointer",
   }
 	return <MenuHeaderContent className_box="header" style_box={header_box_style} style_cell={style_cell} in_line={true}/>
