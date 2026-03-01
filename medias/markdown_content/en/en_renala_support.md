@@ -9,7 +9,7 @@ lang: "en"
 
 ## Get in touch
 
-For questions, bug reports, or feedback, email us at **contact@olombelona.com**
+For questions, bug reports, or feedback, [use our contact form](https://olombelona.com/contact).
 
 We read every message and typically reply within a few business days.
 

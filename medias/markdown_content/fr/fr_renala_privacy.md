@@ -7,7 +7,7 @@ lang: "fr"
 
 **Dernière mise à jour : 1 mars 2026**
 
-Olombelona SAS (« nous »), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — contact@olombelona.com — édite Renala, un visualiseur d'espace disque pour macOS. Cette politique décrit la façon dont Renala traite vos données.
+Olombelona SAS (« nous »), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — édite Renala, un visualiseur d'espace disque pour macOS. Cette politique décrit la façon dont Renala traite vos données.
 
 ---
 
@@ -51,4 +51,4 @@ Si cette politique est modifiée, la version mise à jour sera publiée à cette
 
 ## Contact
 
-Olombelona SAS — contact@olombelona.com
+Olombelona SAS — [formulaire de contact](https://olombelona.com/contact)

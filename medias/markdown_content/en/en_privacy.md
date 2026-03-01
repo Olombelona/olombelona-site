@@ -7,7 +7,7 @@ lang: "en"
 
 **Last updated: 2026-02-23**
 
-Olombelona SAS ("we", "us", "our"), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — contact@olombelona.com — publishes this website and the applications distributed under the Olombelona developer account. This policy describes how we handle personal data across all three.
+Olombelona SAS ("we", "us", "our"), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — publishes this website and the applications distributed under the Olombelona developer account. This policy describes how we handle personal data across all three.
 
 ---
 
@@ -58,7 +58,7 @@ Our services are not directed at children under 13. We do not knowingly collect 
 
 ### Your rights
 
-Depending on your jurisdiction you may have the right to access, correct, or delete personal data we hold. To exercise these rights, contact us at contact@olombelona.com.
+Depending on your jurisdiction you may have the right to access, correct, or delete personal data we hold. To exercise these rights, [contact us](/contact).
 
 ### Changes to this policy
 
@@ -66,4 +66,4 @@ We may update this policy from time to time. Changes are effective when posted a
 
 ### Contact
 
-Olombelona SAS — contact@olombelona.com
+Olombelona SAS — [contact form](/contact)

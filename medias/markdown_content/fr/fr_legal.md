@@ -13,7 +13,7 @@ lang: "fr"
 France
 
 SIRET : 925 005 035 00017
-Contact : contact@olombelona.com
+Contact : [olombelona.com/contact](/contact)
 
 ## Hébergement
 
