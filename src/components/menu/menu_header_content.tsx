@@ -8,7 +8,7 @@
 import React, { FC } from "react";
 import { useContext } from "react";
 // APP
-import { NavCellBox, Box, GoHome, LangToggle } from "../hc.tsx"
+import { NavCellBox, Box, GoHome, LangToggle, ProductsDropdown } from "../hc.tsx"
 import { get_css_value } from "../../utils/hu.tsx";
 import tree from "./../../../medias/tree.json";
 import { RegionContext } from "../../context.tsx";
@@ -27,28 +27,16 @@ interface Props {
 
 export const MenuHeaderContent: FC<Props> =({className_box, style_box, className_cell, style_cell, in_line}) => {
   const { lang } = useContext(RegionContext);
-  let hh = get_css_value("--height_header");
-	let hhc = get_css_value("--height_header_cell");
-	let height_header = 0;
-	let height_header_cell = 0;
-	if(hh !== undefined && hhc !== undefined) {
-		height_header = +hh.slice(0,-2);
-		height_header_cell = +hhc.slice(0,-2);
-	}
 
   const temp_box: React.CSSProperties = {
 		position: "relative",
-		top: (height_header - height_header_cell) * 0.5+"px",
+		display: "flex",
+		alignItems: "center",
 		background: get_css_value("--color_menu_big") ?? undefined,
 	};
 
   const temp_cell: React.CSSProperties = {
 		whiteSpace: "nowrap",
-		position: "absolute",
-		top: "50%",
-		left: "50%",
-		WebkitTransform: "translate(-50%, -50%)",
-		transform: "translate(-50%, -50%)",
 	};
 
   const box = Object.assign({}, style_cell, temp_box);
@@ -60,6 +48,7 @@ export const MenuHeaderContent: FC<Props> =({className_box, style_box, className
 			{in_line !== false ? <GoHome className_box="header_cell" style_box={box} style_cell={cell}/> : <></>}
 			{/* {in_line !== false ? <GoHome className_box={"home_box"} style_box={box} style_cell={cell}/> : <></>} */}
 			<NavCellBox to="/about" className_box="header_cell" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
+			<ProductsDropdown className_box="header_cell" style_box={box} style_cell={cell} />
 			<NavCellBox to="/contact" className_box="header_cell" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
 		</nav>
 		<LangToggle className_box="header_cell" style_box={box} style_cell={cell} />

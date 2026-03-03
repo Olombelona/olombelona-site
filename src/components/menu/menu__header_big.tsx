@@ -18,12 +18,14 @@ export function MenuHeaderBig() {
 	margin: "0 auto",
 	display: "flex",
 	justifyContent: "space-between",
+	alignItems: "center",
 	height: get_css_value("--height_header") ?? undefined,
 	maxWidth: get_css_value("--width_header_max") ?? undefined,
+	padding: "0 12px",
+	boxSizing: "border-box" as const,
   }
 
   const style_cell = {
-	width: "min(100px, 25%)",
 	height: get_css_value("--height_header_cell") ?? undefined,
 	fontFamily: get_css_value("--font_title") ?? undefined,
     fontWeight: 700,
