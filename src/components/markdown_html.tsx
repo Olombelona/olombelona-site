@@ -12,5 +12,5 @@ interface Props {
 }
 
 export const MarkdownHtml: FC<Props> =({html}) => {
-  return <div dangerouslySetInnerHTML={{ __html: html }} />
+  return <div className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
 }
