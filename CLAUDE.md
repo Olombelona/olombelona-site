@@ -63,8 +63,13 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 
 - CSS custom properties defined in `src/components/struct/layout.css` and `src/global.css`
 - Components use inline styles (JS objects) extensively
-- `get_css_value(name)` reads CSS custom properties at runtime with SSR guard
+- `get_css_value(name)` reads CSS custom properties at runtime with SSR guard — returns `undefined` during SSR. Any hardcoded fallback must match the actual value in `layout.css`, or you get a flash/size mismatch on first load.
 - `Box` component supports a debug border mode via `--box_default_design: 1`
+
+### Header Layout
+
+- Header cells use `display: flex; alignItems: center` on both the container (`menu__header_big.tsx`) and each cell box (`menu_header_content.tsx`) for vertical centering — no absolute-positioning tricks.
+- Cell boxes have `position: relative` (required for dropdown panels). Do not add extra wrapper divs between a cell Box and its content without accounting for this.
 
 ### Contexts
 
