@@ -89,7 +89,7 @@ export const ButtonCodeNav: FC<ButtonProps> = ({what, to}) => {
 //////////////////
 export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, style_cell}) => {
 	const raw = get_css_value("--height_header_cell");
-	const sizeNum = raw ? parseInt(raw, 10) : 100;
+	const sizeNum = raw ? parseInt(raw, 10) : 30;
 
 	return (
     <NavCellBox to="/" className_box={className_box} style_box={style_box} className_cell={className_cell} style_cell={style_cell}>
