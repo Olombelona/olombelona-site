@@ -7,7 +7,7 @@ lang: "fr"
 
 **Dernière mise à jour : 1 mars 2026**
 
-Olombelona SAS (« nous »), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — édite Renala, un visualiseur d'espace disque pour macOS. Cette politique décrit la façon dont Renala traite vos données.
+Olombelona SAS (« nous »), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — édite Renala, un visualiseur d'espace disque pour macOS. Cette politique décrit comment Renala traite vos données.
 
 ---
 
@@ -29,7 +29,7 @@ Renala n'effectue aucune requête réseau, sauf lors d'un achat intégré (jar �
 |---------|-------------------------|--------------------|
 | Cache des résultats d'analyse | `~/Library/Containers/com.renala.app/` | Jamais |
 | Préférences de l'application | `~/Library/Containers/com.renala.app/` | Jamais |
-| Noms de fichiers et dossiers vus lors de l'analyse | Mémoire uniquement, jamais enregistrés | Jamais |
+| Noms de fichiers et dossiers parcourus lors de l'analyse | Mémoire uniquement, jamais enregistrés | Jamais |
 
 ## API système utilisées
 

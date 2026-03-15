@@ -19,9 +19,9 @@ Stanislas cumule 23 ans d’expérience comme développeur et designer graphique
 
 ## Lakshmi Kalimireddi [ directrice marketing ]
 
-Lakshmi a plus de quinze ans d’expérience en marketing digital et en opérations. Elle a piloté des campagnes dans de nombreux secteurs avec une approche centrée sur les données et les résultats mesurables. Chez Olombelona, elle pilote la stratégie marketing et les relations clients.
+Lakshmi a plus de quinze ans d’expérience en marketing numérique et en opérations. Elle a piloté des campagnes dans de nombreux secteurs, toujours guidée par les données et les résultats mesurables. Chez Olombelona, elle dirige la stratégie marketing et les relations clients.
 
 ---
 
-Chacun a mené des projets complexes de façon indépendente. Chez Olombelona, ils travaillent en équipe.
+Chacun a mené des projets complexes de façon indépendante. Chez Olombelona, ils travaillent en équipe.
 

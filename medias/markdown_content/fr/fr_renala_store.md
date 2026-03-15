@@ -12,13 +12,13 @@ lang: "fr"
 - **Treemap interactive** pour visualiser l'espace occupé en un coup d'œil
 - **Navigation rapide** du volume au dossier puis au fichier
 - **Recherche et filtres dans la barre latérale** pour aller à l'essentiel
-- **Approche privacy-first** : les analyses restent locales sur votre Mac
+- **Confidentialité avant tout** : les analyses restent locales sur votre Mac
 
 ### Aperçu
 
 ![Vue d'ensemble de la treemap Renala](/renala/01-hero-treemap.png)
 
-![Navigation en profondeur dans les dossiers et fichiers](/renala/02-drill-down.png)
+![Exploration des dossiers et fichiers](/renala/02-drill-down.png)
 
 ![Recherche et navigation via la barre latérale](/renala/03-sidebar-search.png)
 

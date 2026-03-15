@@ -7,7 +7,7 @@ lang: "fr"
 
 **Dernière mise à jour : 23 février 2026**
 
-Olombelona SAS (« nous »), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — édite ce site web et les applications distribuées sous le compte développeur Olombelona. Cette politique décrit la façon dont nous traitons les données personnelles sur ces trois supports.
+Olombelona SAS (« nous »), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais, France — édite ce site web et les applications publiées sous le compte développeur Olombelona. Cette politique décrit comment nous traitons les données personnelles sur ces trois supports.
 
 ---
 
@@ -38,11 +38,11 @@ Aucun autre script tiers, pixel de suivi ou traceur n'est chargé.
 
 Nos applications ne collectent, stockent ni partagent aucune information personnelle identifiable, sauf si vous nous la fournissez volontairement (par exemple en nous contactant par e-mail).
 
-Nos applications peuvent collecter des données d'utilisation anonymes et agrégées (rapports de plantage, métriques de performance) uniquement via le cadre analytique natif d'Apple (App Store Connect Analytics), conformément aux paramètres de confidentialité de votre appareil. Nous n'avons accès à aucune donnée si vous avez désactivé le partage des analyses avec les développeurs sur votre appareil.
+Nos applications peuvent collecter des données d'utilisation anonymes et agrégées (rapports de plantage, métriques de performance) uniquement via le système d'analyse intégré d'Apple (App Store Connect Analytics), conformément aux paramètres de confidentialité de votre appareil. Nous n'avons accès à aucune donnée si vous avez désactivé le partage des analyses avec les développeurs sur votre appareil.
 
 ### SDK tiers
 
-Nos applications n'intègrent aucun SDK publicitaire, de suivi ou d'analyse tiers au-delà des frameworks natifs d'Apple.
+Nos applications n'intègrent aucun SDK publicitaire, de suivi ou d'analyse tiers hormis les frameworks natifs d'Apple.
 
 ---
 
