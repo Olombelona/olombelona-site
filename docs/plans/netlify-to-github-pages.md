@@ -30,7 +30,7 @@
 - [x] Ajouter le secret `TYPEKIT_ID` dans GitHub → Settings → Secrets → Actions
 - [x] Ajouter le secret `GATSBY_FORMSPREE_ENDPOINT` dans GitHub → Settings → Secrets → Actions
 - [x] Activer GitHub Pages : Settings → Pages → Source : « GitHub Actions »
-- [ ] Vérifier que le premier déploiement réussit
+- [x] Vérifier que le premier déploiement réussit
 
 ### 3. En-têtes de sécurité
 - [x] Ajouter les balises `<meta>` dans `gatsby-ssr.tsx` (`Referrer-Policy`, `X-Content-Type-Options`)
@@ -42,17 +42,11 @@
 - [ ] Activer « Enforce HTTPS » (en attente du certificat — nécessite DNS d'abord)
 
 ### 5. Migration DNS (Gandi)
-- [ ] Baisser le TTL à 300s sur les enregistrements A/CNAME de `olombelona.com` et `www`
-- [ ] Attendre 24h que l'ancien TTL expire
-- [ ] Mettre à jour les enregistrements A vers les IP GitHub Pages :
-  - `185.199.108.153`
-  - `185.199.109.153`
-  - `185.199.110.153`
-  - `185.199.111.153`
-- [ ] Mettre à jour le CNAME `www` → `olombelona.github.io`
-- [ ] Vérifier le certificat HTTPS (Let's Encrypt, quelques minutes)
-- [ ] Vérifier que le site fonctionne sur `olombelona.com`
-- [ ] Remonter le TTL à 3600s
+- [x] Mettre à jour les enregistrements A vers les IP GitHub Pages (TTL 3600, cutover direct)
+- [x] Mettre à jour le CNAME `www` → `olombelona.github.io`
+- [x] Vérifier que le site fonctionne sur `http://olombelona.com`
+- [x] Vérifier le certificat HTTPS (Let's Encrypt, expire 2026-06-14)
+- [x] Activer « Enforce HTTPS »
 
 ### 6. Nettoyage
 - [x] Supprimer `netlify.toml`
