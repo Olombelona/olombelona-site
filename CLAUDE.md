@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Olombelona company website — a Gatsby 5 static site with React 18, TypeScript (strict), and bilingual content (French/English). Deployed on Netlify.
+Olombelona company website — a Gatsby 5 static site with React 18, TypeScript (strict), and bilingual content (French/English). Deployed on GitHub Pages.
 
 ## Commands
 
@@ -19,11 +19,11 @@ Olombelona company website — a Gatsby 5 static site with React 18, TypeScript 
 No test framework is configured. Node version is pinned to `v18.20.8` (`.nvmrc`).
 
 - Kill port before restarting dev server: `lsof -ti:PORT | xargs kill -9` — default is 8000, pass `--port XXXX` to use another
-- Trigger a Netlify rebuild without a code change: `git commit --allow-empty -m "..." && git push`
 
 ## Environment
 
 Requires `TYPEKIT_ID` env var (Adobe Fonts kit ID) — set in `.env` files (gitignored).
+Requires `GATSBY_FORMSPREE_ENDPOINT` env var (Formspree form URL) — set in `.env` files and GitHub Actions secrets.
 
 ## Architecture
 
@@ -84,21 +84,21 @@ Re-export barrels follow a naming convention: `hc.tsx` (components), `hr.tsx` (r
 
 ### Deployment
 
-- Netlify hosting with Netlify Forms (`data-netlify="true"`)
+- GitHub Pages hosting with GitHub Actions CI/CD (`.github/workflows/deploy.yml`)
+- Contact form processed by Formspree (endpoint in `GATSBY_FORMSPREE_ENDPOINT` env var)
 - `gatsby-plugin-fix-fouc` with 3s timeout for Flash of Unstyled Content
 - Adobe Typekit fonts loaded via `gatsby-plugin-web-font-loader`
+- Security headers (`Referrer-Policy`, `X-Content-Type-Options`) set via `<meta>` tags in `gatsby-ssr.tsx` (GitHub Pages does not support custom HTTP headers; `X-Frame-Options` has no `<meta>` equivalent)
 
 ## Known Issues
 
 - `npm run typecheck` is currently clean (errors resolved).
 
-## Netlify
+## GitHub Pages
 
-- Netlify site ID: `9cfb45e7-5082-45da-8c41-401d2ae5f6f7`
-- Monitor deploy status: `curl -s -H "Authorization: Bearer $TOKEN" "https://api.netlify.com/api/v1/sites/9cfb45e7-5082-45da-8c41-401d2ae5f6f7/deploys?per_page=1" | python3 -c "import sys,json; d=json.load(sys.stdin)[0]; print(d['state'], d.get('error_message',''))"`
+- Custom domain: `olombelona.com` (CNAME file in `static/`)
+- DNS (Gandi): A records → GitHub Pages IPs (`185.199.108.153` – `185.199.111.153`), `www` CNAME → `olombelona.github.io`
 - Dismiss Dependabot alerts (Gatsby internals are not exploitable in a static site): `gh api repos/Olombelona/olombelona-site/dependabot/alerts/NUM --method PATCH --field state=dismissed --field dismissed_reason=tolerable_risk --field dismissed_comment="..."`
-- Node version is controlled by the **Dependency management** UI setting at `/configuration/deploys`, not by `NODE_VERSION` env var (UI always wins). Must be `18.x` — `@netlify/plugin-gatsby` is auto-installed and has Node constraints.
-- To remove an auto-installed plugin via API: `curl -X DELETE -H "Authorization: Bearer $TOKEN" "https://api.netlify.com/api/v1/sites/9cfb45e7-5082-45da-8c41-401d2ae5f6f7/plugins/@netlify%2Fplugin-name"`
 - `gatsby-plugin-sitemap` was removed — no sitemap is generated (intentional, low-profile site).
 
 ## Git Conventions

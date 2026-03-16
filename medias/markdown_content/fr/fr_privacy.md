@@ -17,7 +17,7 @@ Olombelona SAS (« nous »), 17 rue Roger Salengro, 93310 Le Pré-Saint-Gervais,
 
 Nous n'utilisons ni analytics, ni réseaux publicitaires, ni outil de suivi. Nous ne déposons pas de cookies propriétaires.
 
-Lorsque vous soumettez le formulaire de contact, les données suivantes sont collectées : prénom, nom, adresse e-mail et message. Ces données sont transmises à **Netlify, Inc.** (notre prestataire de traitement de formulaires) et stockées sur des serveurs situés aux États-Unis.
+Lorsque vous soumettez le formulaire de contact, les données suivantes sont collectées : prénom, nom, adresse e-mail et message. Ces données sont transmises à **Formspree (AJMV Corp.)** (notre prestataire de traitement de formulaires) et stockées sur des serveurs situés aux États-Unis.
 
 ### Finalité
 
@@ -26,7 +26,8 @@ Uniquement répondre à votre demande. Nous n'utilisons pas vos coordonnées à 
 ### Services tiers sur ce site
 
 - **Adobe Typekit (Adobe Inc.)** — les polices de caractères sont chargées depuis les serveurs d'Adobe à chaque visite. Adobe peut recevoir votre adresse IP et des informations sur votre navigateur dans le cadre de cette requête. La politique de confidentialité d'Adobe s'applique : [adobe.com/fr/privacy](https://www.adobe.com/fr/privacy/policy.html).
-- **Netlify, Inc.** — héberge ce site et traite les soumissions du formulaire de contact. Politique de confidentialité Netlify : [netlify.com/privacy](https://www.netlify.com/privacy/).
+- **GitHub, Inc.** — héberge ce site (GitHub Pages). Politique de confidentialité GitHub : [docs.github.com/site-policy/privacy-policies](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+- **Formspree (AJMV Corp.)** — traite les soumissions du formulaire de contact. Politique de confidentialité Formspree : [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy/).
 
 Aucun autre script tiers, pixel de suivi ou traceur n'est chargé.
 

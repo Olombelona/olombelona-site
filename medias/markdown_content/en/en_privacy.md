@@ -17,7 +17,7 @@ Olombelona SAS ("we", "us", "our"), 17 rue Roger Salengro, 93310 Le Pré-Saint-G
 
 We do not use analytics, advertising networks, or tracking tools of any kind. We do not set first-party cookies.
 
-When you submit the contact form, the following data is collected: first name, family name, email address, and message. This data is transmitted to and stored by **Netlify, Inc.** (our form processing provider) on servers located in the United States.
+When you submit the contact form, the following data is collected: first name, family name, email address, and message. This data is transmitted to and stored by **Formspree (AJMV Corp.)** (our form processing provider) on servers located in the United States.
 
 ### Why we collect it
 
@@ -26,7 +26,8 @@ Solely to respond to your request. We do not use your contact details for market
 ### Third-party services on this website
 
 - **Adobe Typekit (Adobe Inc.)** — fonts are loaded from Adobe's servers on every page. Adobe may receive your IP address and browser information as part of this request. Adobe's privacy policy applies: [adobe.com/privacy](https://www.adobe.com/privacy/policy.html).
-- **Netlify, Inc.** — hosts this website and processes contact form submissions. Netlify's privacy policy: [netlify.com/privacy](https://www.netlify.com/privacy/).
+- **GitHub, Inc.** — hosts this website (GitHub Pages). GitHub's privacy policy: [docs.github.com/site-policy/privacy-policies](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+- **Formspree (AJMV Corp.)** — processes contact form submissions. Formspree's privacy policy: [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy/).
 
 No other third-party scripts, pixels, or trackers are loaded.
 

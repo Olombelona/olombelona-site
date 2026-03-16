@@ -17,11 +17,6 @@ Contact: [olombelona.com/contact](/contact)
 
 ## Hosting
 
-**Netlify, Inc.**
-512 2nd Street, Suite 200
-San Francisco, CA 94107, United States
-[www.netlify.com](https://www.netlify.com)
-
 **GitHub, Inc.**
 88 Colin P Kelly Jr Street
 San Francisco, CA 94107, United States
@@ -33,4 +28,4 @@ All content on this site (text, images, graphic elements) is the exclusive prope
 
 ## Personal Data
 
-Data collected through the contact form is transmitted to Netlify, Inc. on behalf of Olombelona SAS, solely to process your request. See our [privacy policy](/privacy) for details.
+Data collected through the contact form is transmitted to Formspree (AJMV Corp.) on behalf of Olombelona SAS, solely to process your request. See our [privacy policy](/privacy) for details.

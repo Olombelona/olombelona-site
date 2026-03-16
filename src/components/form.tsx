@@ -1,20 +1,20 @@
 /**
  * Form
  * 2023-2023
- * v 0.0.1
- * 
+ * v 0.0.2
+ *
  * */
 import React, { FC } from "react";
 
 // https://stackoverflow.com/questions/60883388/using-dot-notation-with-functional-component-in-typescript
 // https://www.skovy.dev/blog/using-component-dot-notation-with-typescript-to-create-a-set-of-components?seed=1egekj
 
+const FORMSPREE_ENDPOINT = process.env.GATSBY_FORMSPREE_ENDPOINT || "https://formspree.io/f/XXXXXXXX";
 
 interface FormProps {
   children?: any;
   id_name?: string;
   method?: string;
-  form_name?: string;
   className?: string;
   style?: any;
 }
@@ -30,15 +30,12 @@ interface FormFieldProps {
   placeholder?: string;
 }
 
-// https://www.seancdavis.com/posts/how-to-use-netlify-forms-with-gatsby/
-
 export const Form: FC<FormProps> & {  Input: typeof FormInput,
                                   TextArea: typeof FormTextArea,
                                   Submit: typeof FormSubmit,} = (props) => {
 	return (
-    <form name={props.id_name} method={props.method} data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value={props.form_name ?? props.id_name} />
-      <input type="hidden" name="bot-field" />
+    <form name={props.id_name} method={props.method} action={FORMSPREE_ENDPOINT}>
+      <input type="text" name="_gotcha" style={{display: "none"}} tabIndex={-1} autoComplete="off" />
 			<div className={props.className} style={props.style}>
 				{props.children}
 			</div>
@@ -47,8 +44,6 @@ export const Form: FC<FormProps> & {  Input: typeof FormInput,
 }
 
 export const FormNetlify : FC<FormProps> = (props) => {
-  // Problem with props method, because the value "POST" have a risk to be remplace by the props incoming.
-  // If I understand well the functionnement of the warning message
   return (
 		<>
 		<Form {...props} method="POST" />

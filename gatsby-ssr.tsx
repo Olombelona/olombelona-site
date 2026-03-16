@@ -17,5 +17,7 @@ export const onRenderBody = ({
   setHtmlAttributes({ lang: "fr" });
   setHeadComponents([
     <meta key="robots" name="robots" content="noindex, nofollow" />,
+    <meta key="referrer" name="referrer" content="strict-origin-when-cross-origin" />,
+    <meta key="content-type-options" httpEquiv="X-Content-Type-Options" content="nosniff" />,
   ]);
 };
