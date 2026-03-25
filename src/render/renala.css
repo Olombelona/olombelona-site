@@ -1,0 +1,452 @@
+/* Renala product page — scoped styles */
+
+.renala {
+  --renala-bg: var(--color_3);
+  --renala-bg-dark: #1a0a2e;
+  --renala-bg-accent: var(--color_5);
+  --renala-text: var(--color_5);
+  --renala-text-light: var(--color_3);
+  --renala-accent: var(--color_2);
+
+  margin-bottom: -24px; /* eat parent paddingBottom */
+  overflow-x: hidden; /* prevent scrollbar-induced horizontal scroll (Windows/Linux) */
+}
+
+/* Full-width breakout for showcase strips and CTA */
+.renala__full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+}
+
+/* ─── Hero ─── */
+
+.renala__hero {
+  text-align: center;
+  padding: 100px 24px 60px;
+  animation: renala-hero-fade 0.8s ease-out both;
+}
+
+.renala__hero-title {
+  font-family: var(--font_title);
+  font-size: 5rem;
+  letter-spacing: 0.04em;
+  color: var(--renala-accent);
+  margin: 0 0 16px;
+  line-height: 1;
+}
+
+.renala__hero-tagline {
+  font-family: var(--font_current);
+  font-size: 1.4rem;
+  color: var(--renala-text);
+  line-height: 1.6;
+  margin: 0 auto 48px;
+  max-width: 480px;
+}
+
+@keyframes renala-hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Showcase strips (dark bg for screenshots) ─── */
+
+.renala__showcase {
+  background: var(--renala-bg-dark);
+  padding: 64px 24px;
+}
+
+.renala__showcase-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ─── Screenshot images ─── */
+
+.renala__screenshot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.renala__hero-screenshot {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ─── Feature sections ─── */
+
+.renala__feature-text {
+  padding: 64px 24px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.renala__feature-text h2 {
+  font-family: var(--font_title);
+  font-size: 2rem;
+  color: var(--renala-accent);
+  margin: 0 0 16px;
+}
+
+.renala__feature-text p {
+  font-family: var(--font_current);
+  font-size: 1.15rem;
+  color: var(--renala-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.renala__feature-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 24px;
+}
+
+.renala__feature-image-wrap--left {
+  justify-content: flex-start;
+  padding-left: 10%;
+}
+
+.renala__feature-image-wrap--right {
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+
+.renala__feature-image-wrap .renala__screenshot {
+  max-width: 640px;
+}
+
+/* ─── Accessibility section ─── */
+
+.renala__a11y {
+  text-align: center;
+  padding: 80px 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.renala__a11y-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.renala__a11y h2 {
+  font-family: var(--font_title);
+  font-size: 2rem;
+  color: var(--renala-accent);
+  margin: 0 0 16px;
+}
+
+.renala__a11y p {
+  font-family: var(--font_current);
+  font-size: 1.15rem;
+  color: var(--renala-text);
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.renala__a11y-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.renala__a11y-list li {
+  font-family: var(--font_current);
+  font-size: 1.05rem;
+  color: var(--renala-text);
+  line-height: 1.6;
+  padding: 6px 0 6px 24px;
+  position: relative;
+}
+
+.renala__a11y-list li::before {
+  content: "\2713";
+  color: var(--renala-accent);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+/* ─── Privacy section ─── */
+
+.renala__privacy {
+  text-align: center;
+  padding: 80px 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.renala__privacy-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.renala__privacy h2 {
+  font-family: var(--font_title);
+  font-size: 2rem;
+  color: var(--renala-accent);
+  margin: 0 0 16px;
+}
+
+.renala__privacy p {
+  font-family: var(--font_current);
+  font-size: 1.15rem;
+  color: var(--renala-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ─── Dark mode section ─── */
+
+.renala__darkmode {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.renala__darkmode h2 {
+  font-family: var(--font_title);
+  font-size: 2rem;
+  color: var(--renala-text-light);
+  margin: 0 0 12px;
+}
+
+.renala__darkmode p {
+  font-family: var(--font_current);
+  font-size: 1.15rem;
+  color: var(--renala-text-light);
+  opacity: 0.85;
+  line-height: 1.6;
+  margin: 0 auto 40px;
+  max-width: 520px;
+}
+
+.renala__darkmode .renala__screenshot {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ─── CTA section ─── */
+
+.renala__cta {
+  background: var(--renala-bg-accent);
+  text-align: center;
+  padding: 100px 24px;
+}
+
+.renala__cta h2 {
+  font-family: var(--font_title);
+  font-size: 2.5rem;
+  color: var(--renala-text-light);
+  margin: 0 0 12px;
+}
+
+.renala__cta-subtitle {
+  font-family: var(--font_current);
+  font-size: 1.2rem;
+  color: var(--renala-text-light);
+  margin: 0 0 32px;
+}
+
+.renala__cta-requirements {
+  font-family: var(--font_current);
+  font-size: 0.9rem;
+  color: var(--renala-text-light);
+  opacity: 0.7;
+  margin: 20px 0 0;
+}
+
+/* ─── CTA buttons ─── */
+
+.renala__btn {
+  display: inline-block;
+  font-family: var(--font_current);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.renala__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.renala__btn--primary {
+  background: var(--renala-accent);
+  color: var(--renala-text-light);
+}
+
+.renala__btn--cta {
+  background: var(--renala-text-light);
+  color: var(--renala-bg-accent);
+  font-size: 1.2rem;
+  padding: 16px 40px;
+}
+
+/* ─── Footer links ─── */
+
+.renala__links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px 24px 36px;
+}
+
+.renala__links a {
+  font-family: var(--font_current);
+  font-size: 0.95rem;
+  color: var(--renala-text);
+  opacity: 0.7;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.renala__links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ─── Scroll animations ─── */
+
+.renala__fade-in {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.renala__fade-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Accessibility ─── */
+
+@media (prefers-reduced-motion: reduce) {
+  .renala__fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .renala__hero {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Focus indicators on dark backgrounds */
+.renala__showcase :focus-visible,
+.renala__cta :focus-visible {
+  outline: 2px solid var(--color_3);
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  .renala__showcase,
+  .renala__cta {
+    background: Canvas;
+    color: CanvasText;
+  }
+  .renala img {
+    border: 1px solid CanvasText;
+  }
+}
+
+/* ─── Responsive ─── */
+
+@media only screen and (max-width: 768px) {
+  .renala__hero-title {
+    font-size: 3.5rem;
+  }
+
+  .renala__hero-tagline {
+    font-size: 1.2rem;
+  }
+
+  .renala__feature-image-wrap--left,
+  .renala__feature-image-wrap--right {
+    justify-content: center;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .renala__cta h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .renala__hero {
+    padding: 64px 16px 40px;
+  }
+
+  .renala__hero-title {
+    font-size: 2.75rem;
+  }
+
+  .renala__hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .renala__feature-text {
+    padding: 40px 16px;
+  }
+
+  .renala__feature-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .renala__showcase {
+    padding: 40px 16px;
+  }
+
+  .renala__a11y {
+    padding: 48px 16px;
+  }
+
+  .renala__privacy {
+    padding: 48px 16px;
+  }
+
+  .renala__darkmode {
+    padding: 48px 16px;
+  }
+
+  .renala__cta {
+    padding: 64px 16px;
+  }
+
+  .renala__cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .renala__btn {
+    display: block;
+    text-align: center;
+  }
+
+  .renala__btn--cta {
+    padding: 14px 24px;
+    font-size: 1.1rem;
+  }
+}

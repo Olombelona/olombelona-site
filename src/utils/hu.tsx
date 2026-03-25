@@ -9,4 +9,5 @@
  * */
 export { useNode } from './hook.tsx';
 export { get_css_value } from "./tools.tsx";
+export { useFadeIn } from "./use_fade_in.tsx";
 

@@ -12,3 +12,4 @@ export { RenderAbout } from "./render_about.tsx";
 export { RenderContact } from "./render_contact.tsx";
 export { RenderTeam } from "./render_team.tsx";
 export { RenderPage } from "./render_page.tsx";
+export { RenderRenala } from "./render_renala.tsx";
