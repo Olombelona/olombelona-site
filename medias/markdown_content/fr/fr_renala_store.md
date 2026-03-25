@@ -28,8 +28,8 @@ lang: "fr"
 
 ### Mac App Store
 
-**Bientôt disponible sur le Mac App Store.**  
-La fiche est actuellement en cours de validation par Apple.
+[**Télécharger Renala sur le Mac App Store**](https://apps.apple.com/app/renala/id6759845223)
+Gratuit. Nécessite macOS 14 Sonoma ou ultérieur.
 
 Pour les nouveautés et le support : [contactez-nous](https://olombelona.com/contact)
 
